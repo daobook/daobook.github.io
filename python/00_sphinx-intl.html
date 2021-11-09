@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sphinx 国际化 &#8212; daobook 0.0.0 文档</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "daobook/daobook.github.io");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".cell"
+        const thebe_selector_input = ".cell_input div.highlight"
+        const thebe_selector_output = ".cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="版本发布" href="../release/index.html" />
+    <link rel="prev" title="Python" href="index.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">daobook 0.0.0 文档</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  导航
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../posts/index.html">
+   博客
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sinicization/index.html">
+   中国化
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/cpython.html">
+     CPython
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/peps.html">
+     PEPS（制作中 …）
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/pypa.html">
+     PyPA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/rtd.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sphinx-rtd-theme
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/sphinx.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sphinx
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sinicization/sphinx-book-theme.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sphinx-book-theme
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Python
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Sphinx 国际化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../release/index.html">
+   版本发布
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../release/v0.1.html">
+     发布 daobook v0.0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../drafts/index.html">
+   缓存区
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/markdown.html">
+     在你的markdown文件中执行代码
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/ref.html">
+     参考
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <p>
+    版权 © 2021
+    <a href="https://daobook.github.io/">Dao Book</a>
+</p>
+<p>
+    由 <a href="https://ebp.jupyterbook.org/">EBP</a> 
+    提供技术支持
+</p>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/00_sphinx-intl.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/daobook/daobook.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fpython/00_sphinx-intl.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/python/00_sphinx-intl.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   研究需要翻译的项目
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   完善翻译
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   更新源文档
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   贡献源文档
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   小技巧
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="sphinx">
+<h1>Sphinx 国际化<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
+<p>下面讨论 Sphinx 项目文档翻译为多语言的方法。</p>
+<p>本文以 <a class="reference external" href="https://github.com/sphinx-doc/sphinx-intl">sphinx-doc/sphinx-intl</a> 转换为中英双语文档为例来说明实际的操作方法。</p>
+<div class="section" id="id1">
+<h2>研究需要翻译的项目<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>研究需要翻译的项目的文档生成方法。</p>
+<ul class="simple">
+<li><p>fork <a class="reference external" href="https://github.com/sphinx-doc/sphinx-intl">sphinx-doc/sphinx-intl</a>，并克隆到本地，比如 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a>。为了更好的管理项目，可以切换出一个新的分支，比如：<code class="docutils literal notranslate"><span class="pre">develop</span></code> 分支。</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git checkout -b develop
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>需要配置 Sphinx 环境，即使用 PyPI 安装如下包：</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">intl</span>
+<span class="n">sphinxcontrib</span><span class="o">-</span><span class="n">websupport</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>进入文档目录，并生成 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件：</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
+sphinx-build -b gettext ./ _build/gettext
+sphinx-intl update -p _build/gettext -l zh_CN
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>翻译 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 为目标语言（即你翻译后的语言），比如（这里被存放在 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 文件夹下）：</p></li>
+</ul>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="kd">#: ../../basic.rst:3</span>
+<span class="nv">msgid</span> <span class="s">&quot;Basic&quot;</span>
+<span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>只需要将 <code class="docutils literal notranslate"><span class="pre">msgid</span></code> 的值翻译为 <code class="docutils literal notranslate"><span class="pre">msgstr</span></code> 的值，如 <code class="docutils literal notranslate"><span class="pre">zh_CN</span></code> 的 <code class="docutils literal notranslate"><span class="pre">基础</span></code>，即：</p>
+<div class="highlight-po notranslate"><div class="highlight"><pre><span></span><span class="kd">#: ../../basic.rst:3</span>
+<span class="nv">msgid</span> <span class="s">&quot;Basic&quot;</span>
+<span class="nv">msgstr</span> <span class="s">&quot;基础&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>待翻译结束（由你决定），便需要将 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 编译为 <code class="docutils literal notranslate"><span class="pre">.mo</span></code> 文件（其中 <code class="docutils literal notranslate"><span class="pre">zh-CN</span></code> 是目标语言的代号），同时输出最终的文档：</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sphinx-build -D <span class="nv">language</span><span class="o">=</span>zh_CN -b html ./ _build/html/zh-CN
+</pre></div>
+</div>
+<p>如若要保留英语原文，可以使用如下命令：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sphinx-build -D <span class="nv">language</span><span class="o">=</span>en -b html ./ _build/html
+</pre></div>
+</div>
+<p>这样，<code class="docutils literal notranslate"><span class="pre">/docs/_build/html</span></code> 目录下存储了中英两个版本的内容。</p>
+</div>
+<div class="section" id="id2">
+<h2>完善翻译<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>我在 GitHub 创建了一个组织 <a class="reference external" href="https://github.com/sphinx-locales">sphinx-locales</a>。目的是为了提高翻译效率，可以将 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 文件夹上传，与他人协助翻译。</p>
+<p>再回到项目 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a>，把 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 放置在 <a class="reference external" href="https://github.com/sphinx-locales/sphinx-intl">sphinx-locales/sphinx-intl</a>，并使用 GitHub Action 令上述的翻译过程自动化。</p>
+<p>首先，创建文件 <code class="file docutils literal notranslate"><span class="pre">requirements.txt</span></code>，用于配置该项目的 Sphinx 环境。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:sphinx-locales/sphinx-intl.git sphinx-intl-locale
+<span class="nb">cd</span> sphinx-intl-locale
+</pre></div>
+</div>
+<p>然后，将 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a> 生成的 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 复制到 <code class="docutils literal notranslate"><span class="pre">sphinx-intl-locale/</span></code> 目录下，并改名为 <code class="docutils literal notranslate"><span class="pre">locales/</span></code>。</p>
+<p>接着，创建文件 <code class="file docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code> 用于部署自动化流程。</p>
+<div class="literal-block-wrapper docutils container" id="sphinx-intl-deploy-yml">
+<div class="code-block-caption"><span class="caption-text">daobook/sphinx-intl deploy.yml</span><a class="headerlink" href="#sphinx-intl-deploy-yml" title="永久链接至代码">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="linenos"> 2</span><span class="nt">on</span><span class="p">:</span>
+<span class="linenos"> 3</span><span class="nt">push</span><span class="p">:</span>
+<span class="linenos"> 4</span>    <span class="nt">branches</span><span class="p">:</span>
+<span class="linenos"> 5</span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="nt">jobs</span><span class="p">:</span>
+<span class="linenos"> 8</span><span class="c1"># 这个工作流程包含一个名为 &quot;build&quot; 的 job</span>
+<span class="linenos"> 9</span><span class="nt">build</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="c1"># job 将运行的运行器的类型</span>
+<span class="linenos">11</span>    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1"># steps 将作为工作的一部分而执行的任务序列</span>
+<span class="linenos">14</span>    <span class="nt">steps</span><span class="p">:</span>
+<span class="linenos">15</span>    <span class="c1"># 这个动作在 $GITHUB_WORKSPACE 下签出你的版本库，以便工作流就可以访问它</span>
+<span class="linenos">16</span>    <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<span class="linenos">17</span>    <span class="c1"># 设定 Python 环境</span>
+<span class="linenos">18</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<span class="linenos">19</span>        <span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+<span class="linenos">20</span>        <span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+<span class="linenos">21</span>        <span class="nt">python-version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3.9</span>
+<span class="linenos">22</span>    <span class="c1"># 设定 conda 环境</span>
+<span class="linenos">23</span>    <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">s-weigand/setup-conda@v1</span>
+<span class="linenos">24</span>    <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conda --version</span>
+<span class="linenos">25</span>    <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">which python</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>    <span class="c1"># 安装依赖包</span>
+<span class="linenos">28</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="linenos">29</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos">30</span>        <span class="no">pip install -r requirements.txt</span>
+</span><span class="linenos">31</span>
+<span class="linenos">32</span>    <span class="c1"># 克隆</span>
+<span class="linenos">33</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clone</span>
+<span class="linenos">34</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos">35</span>        <span class="no">git clone https://github.com/daobook/sphinx-intl.git draft</span>
+</span><span class="linenos">36</span>
+<span class="linenos">37</span>    <span class="c1"># 构建 Sphinx 文档</span>
+<span class="linenos">38</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
+<span class="linenos">39</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos">40</span>        <span class="no">cp locales/ -rf draft/doc/locale/</span>
+</span><span class="hll"><span class="linenos">41</span>        <span class="no">cd draft/doc</span>
+</span><span class="linenos">42</span>        <span class="no">sphinx-build -b gettext ./ _build/gettext</span>
+<span class="linenos">43</span>        <span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span>
+<span class="linenos">44</span>        <span class="no">sphinx-build -D language=en -b html ./ _build/html/</span>
+<span class="linenos">45</span>        <span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span>
+<span class="linenos">46</span>        <span class="no">cd ../..</span>
+<span class="hll"><span class="linenos">47</span>        <span class="no">cp -rf draft/docs/_build/ _build</span>
+</span><span class="linenos">48</span>        <span class="no">rm -rf draft/</span>
+<span class="linenos">49</span>
+<span class="linenos">50</span>    <span class="c1"># 部署 HTML 到 gh-pages 分支</span>
+<span class="linenos">51</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GitHub Pages action</span>
+<span class="linenos">52</span>        <span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3.6.1</span>
+<span class="linenos">53</span>        <span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+<span class="linenos">54</span>        <span class="nt">github_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="linenos">55</span>        <span class="nt">publish_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_build/html</span>
+<span class="linenos">56</span>        <span class="nt">user_name</span><span class="p">:</span> <span class="s">&quot;github-actions[bot]&quot;</span>
+<span class="linenos">57</span>        <span class="nt">user_email</span><span class="p">:</span> <span class="s">&quot;github-actions[bot]@users.noreply.github.com&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>最后，使用 Git 上传，便会自动化部署到 <a class="reference external" href="https://sphinx-locales.github.io/sphinx-intl">sphinx-intl</a> 预览效果。可以不断的修改，直到你觉得翻译的意思没有问题为止。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>对于 Jupyter Book 项目，需要做一些调整：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
+  <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">cp locales/ -rf draft/doc/locale/</span>
+    <span class="no">cd draft/doc</span>
+    <span class="no">jb build --builder custom --custom-builder gettext --path-output _gettext .</span>
+    <span class="no">rm -rf _gettext/_build/.jupyter_cache/ _gettext/_build/jupyter_execute </span>
+    <span class="no">sphinx-intl update -p _gettext/_build/gettext -l zh_CN</span>
+    <span class="no">jb build .</span>
+    <span class="no">...</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>高亮的部分是依据您的项目而定的。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>更新源文档<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>如果 <a class="reference external" href="https://github.com/sphinx-doc/sphinx-intl">sphinx-doc/sphinx-intl</a> 文档有所改动，相应的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 则需要更新。基于此，再次回到项目 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">develop</span></code> 分支下。</p>
+<p>首先，<a class="reference external" href="https://sphinx-locales.github.io/sphinx-intl">sphinx-intl</a> 翻译的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 覆盖 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">doc/locale</span></code>：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/sphinx-locales/sphinx-intl.git draft/
+rm -rf doc/locale
+cp -rf draft/locales/ doc/locale/
+rm -rf draft
+</pre></div>
+</div>
+<p>其次，进入文档目录，并生成 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> doc
+sphinx-build -b gettext ./ _build/gettext
+sphinx-intl update -p _build/gettext -l zh_CN
+</pre></div>
+</div>
+<p>最后，校队并翻译 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件。觉得，翻译的差不多了，再次将其 <code class="docutils literal notranslate"><span class="pre">locale/</span></code> 文件夹替换掉 <a class="reference external" href="https://sphinx-locales.github.io/sphinx-intl">sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 文件夹。</p>
+</div>
+<div class="section" id="id4">
+<h2>贡献源文档<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>如若您需要对源文档，即 <a class="reference external" href="https://github.com/sphinx-doc/sphinx-intl">sphinx-doc/sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">/docs/</span></code> 中的内容做出修改或者添加等贡献行为，则可以这样做。</p>
+<p>首先，贡献源文档，并更新 <a class="reference external" href="https://sphinx-locales.github.io/sphinx-intl">sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 文件夹。
+其次，创建 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a> 的自动化流程 <code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code>：</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nn">...</span>
+<span class="linenos"> 2</span>  <span class="c1"># 安装依赖包</span>
+<span class="linenos"> 3</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="linenos"> 4</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos"> 5</span>      <span class="no">pip install -r doc/requirements.txt</span>
+</span><span class="linenos"> 6</span>
+<span class="linenos"> 7</span>  <span class="c1"># 克隆</span>
+<span class="linenos"> 8</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clone</span>
+<span class="linenos"> 9</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos">10</span>      <span class="no">git clone https://github.com/sphinx-locales/sphinx-intl.git draft</span>
+</span><span class="linenos">11</span>
+<span class="linenos">12</span>  <span class="c1"># 构建 Sphinx 文档</span>
+<span class="linenos">13</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
+<span class="linenos">14</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+<span class="hll"><span class="linenos">15</span>      <span class="no">cp -rf draft/locales/ doc/locale/</span>
+</span><span class="linenos">16</span>      <span class="no">rm -rf draft/</span>
+<span class="hll"><span class="linenos">17</span>      <span class="no">cd doc</span>
+</span><span class="linenos">18</span>      <span class="no">sphinx-build -b gettext ./ _build/gettext</span>
+<span class="linenos">19</span>      <span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span>
+<span class="linenos">20</span>      <span class="no">sphinx-build -D language=en -b html ./ _build/html/</span>
+<span class="linenos">21</span>      <span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span>
+<span class="linenos">22</span>      <span class="no">cd ..</span>
+<span class="hll"><span class="linenos">23</span>      <span class="no">cp -rf doc/_build/ _build/</span>
+</span><span class="hll"><span class="linenos">24</span>      <span class="no">rm -rf doc/_build/</span>
+</span><span class="linenos">25</span><span class="nn">...</span>
+</pre></div>
+</div>
+<p>其中，<code class="docutils literal notranslate"><span class="pre">...</span></code> 部分，同 <a class="reference internal" href="#sphinx-intl-deploy-yml"><span class="std std-ref">daobook/sphinx-intl deploy.yml</span></a>。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>高亮的部分是依据您的项目而定的。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>小技巧<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>VSCode 中 <code class="docutils literal notranslate"><span class="pre">po</span></code> 文件的高亮，可以使用 vscode 插件 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mrorz.language-gettext">gettext</a>。</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "daobook/daobook.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="index.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Python</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../release/index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">版本发布</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By xinetzone<br/>
+        
+            &copy; Copyright 2021, xinetzone.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
