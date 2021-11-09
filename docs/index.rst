@@ -27,10 +27,17 @@
    :caption: 导航
 
    posts/index
-   sinicization/index
+   
    python/index
    release/index
    drafts/index
+
+.. toctree::
+   :caption: 国际化
+   :maxdepth: 2
+
+   sinicization/index
+
 
 索引和表格
 ==================

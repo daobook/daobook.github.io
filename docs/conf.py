@@ -151,7 +151,7 @@ html_sidebars = {
 }
 
 extra_navbar = """<p>
-    版权 © 2021
+    版权所有 © 2021
     <a href="https://daobook.github.io/">Dao Book</a>
 </p>
 <p>
