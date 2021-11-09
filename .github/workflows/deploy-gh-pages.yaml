@@ -54,8 +54,9 @@ jobs:
         run: rm -r docs/_build/doctrees/
 
       - name: 🚀 Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: peaceiris/actions-gh-pages@v3.6.1
         with:
-          branch: gh-pages # The branch to deploy to.
-          folder: docs/_build/html # Synchronise with build.py -> build_directory
-          single-commit: true # Delete existing files
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
