@@ -1,0 +1,11 @@
+Sphinx>=4.2
+sphinx-book-theme
+sphinx-intl
+ablog
+myst-nb
+sphinx-thebe
+sphinx-copybutton
+sphinx-comments
+plotly
+pandas
+matplotlib
