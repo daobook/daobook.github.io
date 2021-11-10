@@ -51,6 +51,20 @@ extensions = [
     # "sphinxext.opengraph",
 ]
 
+myst_enable_extensions = [
+    "colon_fence",
+    # "amsmath",
+    # "deflist",
+    # "dollarmath",
+    # "html_admonition",
+    # "html_image",
+    # "linkify",
+    # "replacements",
+    # "smartquotes",
+    # "substitution",
+    # "tasklist",
+]
+
 comments_config = {
     "hypothesis": True,
     "dokieli": False,
@@ -182,7 +196,7 @@ html_theme_options = {
     # -- 在导航栏中添加一个链接到文档库的按钮。----------------------------------
     "use_repository_button": True,  # 默认 `False`
     # -- 包含从 Jupyter 笔记本建立页面的 Binder 启动按钮。 ---------------------
-    "launch_buttons": True, # 默认 `False`
+    "launch_buttons": True,  # 默认 `False`
     "home_page_in_toc": False,  # 是否将主页放在导航栏（顶部）
     # -- 只显示标识，不显示 `html_title`，如果它存在的话。-----
     # "logo_only": True,
