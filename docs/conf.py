@@ -91,7 +91,9 @@ nb_render_priority = {
 }
 
 # 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
+# 避免将 jupter 执行报错的信息输出到 cmd 
 nb_merge_streams = True
+execution_allow_errors = True
 
 extlinks = {
     # 'duref': ('https://docutils.sourceforge.io/docs/ref/rst/'
