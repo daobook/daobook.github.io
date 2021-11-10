@@ -90,6 +90,9 @@ nb_render_priority = {
     'gettext': ()
 }
 
+# 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
+nb_merge_streams = True
+
 extlinks = {
     # 'duref': ('https://docutils.sourceforge.io/docs/ref/rst/'
     #           'restructuredtext.html#%s', ''),
