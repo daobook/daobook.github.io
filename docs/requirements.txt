@@ -1,5 +1,6 @@
 Sphinx>=4.2
-sphinx-book-theme
+docutils
+sphinx-book-theme==0.1.6
 sphinx-intl
 ablog
 myst-nb
@@ -8,4 +9,4 @@ sphinx-copybutton
 sphinx-comments
 plotly
 pandas
-matplotlib
+matplotlib==3.5.0rc1
