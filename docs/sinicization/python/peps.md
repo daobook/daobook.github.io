@@ -4,4 +4,4 @@
 
 {daobook}`#` 工作是：
 
-- {github}`sphinx-locales/sphinx_rtd_theme-locale`：托管了 {github}`python/peps` 的汉化文件 `locale/`。
+- {github}`daobook/peps`（`xinet` 分支）：托管了 {github}`python/peps` 的汉化版本。
