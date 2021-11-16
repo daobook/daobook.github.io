@@ -28,6 +28,8 @@
 
    python/index
    sinicization/index
+   write/index
+   english/index
    posts/index
    release/index
    drafts/index

@@ -1,3 +1,16 @@
 blockquote.epigraph {
     background-color: antiquewhite;
 }
+
+a.backref {
+    text-decoration: none;
+    color: black
+}
+
+div.line-block {
+    display: block
+}
+
+div.line-block div.line-block {
+    margin-left: 1.5em
+}

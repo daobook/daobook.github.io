@@ -105,13 +105,15 @@ extlinks = {
     'github': ('https://github.com/%s', ''),
     'daobook': ('https://daobook.github.io/%s', ''),
     'sphinx-locales': ('https://sphinx-locales.github.io/%s', ''),
-    'ablog': ('https://daobook.github.io/ablog/zh-CN/%s', '')
+    'ablog': ('https://daobook.github.io/ablog/zh-CN/%s', ''),
+    'docutils': ('https://daobook.github.io/docutils/docutils/%s', '')
 }
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://daobook.github.io/sphinx/zh-CN', None),
-    'peps': ('https://daobook.github.io/peps', None)
+    'peps': ('https://daobook.github.io/peps', None),
+    'docutils': ('https://daobook.github.io/docutils/%s', '')
 }
 
 # Add any paths that contain templates here, relative to this directory.
