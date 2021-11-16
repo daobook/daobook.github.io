@@ -4,6 +4,6 @@
 
 reStructuredText 文件的扩展名可以是 `.txt` 或者 `.rst`。
 
-- 快速入门：{docutils}`ReStructuredText 初探 <docs/user/rst/quickstart.html>` 与 {docutils}`快速入门 ReStructuredText <docs/user/rst/quickref.html>`。
-- 技术规范：{docutils}`ReStructuredText 标记规范 <docs/ref/rst/restructuredtext.html>`。
+- 快速入门：{daobook}`ReStructuredText 初探 <docutils/docs/user/rst/quickstart.html>` 与 {daobook}`快速入门 ReStructuredText <docutils/docs/user/rst/quickref.html>`。
+- 技术规范：{daobook}`ReStructuredText 标记规范 <docutils/docs/ref/rst/restructuredtext.html>`。
 - PEP：[](pep-0256) & [](pep-0258)。
