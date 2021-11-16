@@ -7,3 +7,7 @@
 其中 `develop` 分支记录来源于 [Docutils 项目](https://github.com/live-clones/docutils)，并保持更新。主分支 `main` 是其中文版本。
 
 期待你加入我们的翻译工作！
+
+## Docutils 简介
+
+Docutils（全称 Python Documentation Utilities）是一个将纯文本文档处理成有用格式的系统，如 HTML、XML 和 LaTeX。它的发音与 “DOCumentation UTILitieS” 相同，重点在第一个音节。
