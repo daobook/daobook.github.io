@@ -14,6 +14,10 @@ import os
 import sys
 import ablog
 
+if sys.platform == 'win32':
+    import asyncio
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
@@ -23,7 +27,7 @@ copyright = '2021, xinetzone'
 author = 'xinetzone'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.0'
+release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -39,6 +43,8 @@ extensions = [
     "sphinx_thebe",
     "sphinx_copybutton",
     "sphinx_comments",
+    "sphinx_panels",
+    "sphinx_inline_tabs",
     # "sphinx.ext.todo",
     # "sphinxcontrib.bibtex",
     # "sphinx_togglebutton",
@@ -106,7 +112,7 @@ extlinks = {
     'daobook': ('https://daobook.github.io/%s', ''),
     'sphinx-locales': ('https://sphinx-locales.github.io/%s', ''),
     'ablog': ('https://daobook.github.io/ablog/zh-CN/%s', ''),
-    'docutils': ('https://daobook.github.io/docutils/docutils/%s', '')
+    'docutils': ('https://daobook.github.io/docutils/%s', '')
 }
 
 intersphinx_mapping = {

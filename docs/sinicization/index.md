@@ -8,4 +8,5 @@
 
 python/index
 sphinx/index
+myst/index
 ```

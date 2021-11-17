@@ -7,6 +7,8 @@ sphinx-comments
 plotly
 pandas
 matplotlib
+sphinx-inline-tabs
+sphinx-panels
 sphinx-book-theme>=0.1.6
 Sphinx==4.2
 # docutils==0.17
