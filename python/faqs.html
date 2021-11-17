@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>发布 daobook v0.0 &#8212; daobook 0.0.0 文档</title>
+    <title>常见问题 &#8212; daobook 0.0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/default.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
@@ -39,6 +43,7 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script kind="utterances">
 
@@ -87,8 +92,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="缓存区" href="../drafts/index.html" />
-    <link rel="prev" title="版本发布" href="index.html" /> 
+    <link rel="next" title="中国化" href="../sinicization/index.html" />
+    <link rel="prev" title="Docutils 使用手册" href="01_docutils.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -149,7 +154,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">daobook 0.0.0 文档</h1>
+      <h1 class="site-logo" id="site-title">daobook 0.0.1 文档</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -163,24 +168,29 @@ commentsRunWhenDOMLoaded(addUtterances);
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../python/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/00_sphinx-intl.html">
+    <a class="reference internal" href="00_sphinx-intl.html">
      Sphinx 国际化
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/01_docutils.html">
+    <a class="reference internal" href="01_docutils.html">
      Docutils 使用手册
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     常见问题
     </a>
    </li>
   </ul>
@@ -280,14 +290,62 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
     </ul>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sinicization/myst/index.html">
+     MyST Markdown
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/jupyter-book.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyter-book
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/markdown-it.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         markdown-it
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/markdown-it-py.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         markdown-it-py
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/myst-parser.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MyST-Parser
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../write/index.html">
    写作
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -303,8 +361,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../english/index.html">
    英语
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -321,19 +379,19 @@ commentsRunWhenDOMLoaded(addUtterances);
    博客
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../release/index.html">
    版本发布
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     发布 daobook v0.0
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../release/v0.0.1.html">
+     发布 daobook v0.0.1
     </a>
    </li>
   </ul>
@@ -342,8 +400,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../drafts/index.html">
    缓存区
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -409,9 +467,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/release/v0.1.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/faqs.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -429,10 +487,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Frelease/v0.1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fpython/faqs.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/release/v0.1.rst"><button
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/python/faqs.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -452,6 +510,25 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#window-tornado">
+   解决 Window 平台下对
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     tornado
+    </span>
+   </code>
+   的支持问题
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -459,9 +536,36 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="section" id="daobook-v0-0">
-<h1>发布 daobook v0.0<a class="headerlink" href="#daobook-v0-0" title="永久链接至标题">¶</a></h1>
-<p>初步设置项目。</p>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>常见问题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="window-tornado">
+<h2>解决 Window 平台下对 <code class="docutils literal notranslate"><span class="pre">tornado</span></code> 的支持问题<a class="headerlink" href="#window-tornado" title="永久链接至标题">¶</a></h2>
+<p>警告信息：</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>**\lib\site-packages\zmq_future.py:591: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use <code class="docutils literal notranslate"><span class="pre">asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())</span></code> to avoid this warning.
+self._get_loop()</p>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">解决策略（从根源）</label><div class="tab-content docutils">
+<p>在 <code class="docutils literal notranslate"><span class="pre">Lib/site-packages/tornado/platform/asyncio.py</span></code> 中添加：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">WindowsSelectorEventLoopPolicy</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--2">修改配置文件</label><div class="tab-content docutils">
+<p>如果不想修改环境内的包，可以在你的应用的主程序或者配置文件（例如 Sphinx 项目的 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中）中添加如下代码：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">asyncio</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">WindowsSelectorEventLoopPolicy</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -477,24 +581,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./release"
+            path: "./python"
         },
         predefinedOutput: true
     }
     </script>
     <script>kernelName = 'python3'</script>
 <div class="section">
-     
-<div class="section">
-  <span style="float: left">
-    
-  </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-    
-  </span>
-</div>
-  
+   
 </div>
 
               </div>
@@ -502,17 +596,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="01_docutils.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">版本发布</p>
+            <p class="prev-next-title">Docutils 使用手册</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../drafts/index.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="../sinicization/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">缓存区</p>
+        <p class="prev-next-title">中国化</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

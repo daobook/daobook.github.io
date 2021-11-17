@@ -2,18 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://daobook.github.io</id>
   <title>Blog</title>
-  <updated>2021-11-16T11:02:15.912466+00:00</updated>
+  <updated>2021-11-17T08:24:27.888115+00:00</updated>
   <link href="https://daobook.github.io"/>
   <link href="https://daobook.github.io/posts/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
   <entry>
-    <id>https://daobook.github.io/release/v0.1.html</id>
-    <title>发布 daobook v0.0</title>
+    <id>https://daobook.github.io/release/v0.0.1.html</id>
+    <title>发布 daobook v0.0.1</title>
     <updated>2021-10-24T18:00:00+00:00</updated>
     <author>
       <name>刘新伟</name>
     </author>
     <content type="html">&lt;p&gt;初步设置项目。&lt;/p&gt;
+&lt;p&gt;支持 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;{fa}`check,text-success&lt;/span&gt; &lt;span class="pre"&gt;mr-1`&lt;/span&gt;&lt;/code&gt; 渲染：&lt;span class="fa fa-check text-success mr-1"&gt;&lt;/span&gt;。&lt;/p&gt;
 
     &lt;script type="text/x-thebe-config"&gt;
     {
@@ -34,8 +35,8 @@
     }
     &lt;/script&gt;
     &lt;script&gt;kernelName = 'python3'&lt;/script&gt;</content>
-    <link href="https://daobook.github.io/release/v0.1.html" rel="alternate"/>
-    <summary>初步设置项目。</summary>
+    <link href="https://daobook.github.io/release/v0.0.1.html" rel="alternate"/>
+    <summary>初步设置项目。支持 {fa}`check,text-success mr-1` 渲染：。</summary>
     <category term="xinetzone" label="xinetzone"/>
     <published>2021-10-24T18:00:00+00:00</published>
   </entry>
