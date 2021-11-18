@@ -29,8 +29,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
     
@@ -93,7 +93,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="PyPA" href="pypa.html" />
-    <link rel="prev" title="Docutils" href="docutils.html" /> 
+    <link rel="prev" title="packaging.python.org" href="packaging.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -225,6 +225,11 @@ commentsRunWhenDOMLoaded(addUtterances);
        Docutils
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="packaging.html">
+       packaging.python.org
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        PEPS
@@ -233,6 +238,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      <li class="toctree-l3">
       <a class="reference internal" href="pypa.html">
        PyPA
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="python-guide.html">
+       python-guide
       </a>
      </li>
     </ul>
@@ -516,33 +526,38 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   已完成翻译
+  <a class="reference internal nav-link" href="#pep">
+   PEP 元信息
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pep">
-     PEP 元信息
+    <a class="reference internal nav-link" href="#id1">
+     需要仔细研读
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       需要仔细研读
-      </a>
-     </li>
-    </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   信息型 PEP
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     信息型 PEP
+     需要仔细研读
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       需要仔细研读
-      </a>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   完成的 PEPs（已完成，有稳定的接口）
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     构建 Python 环境
+    </a>
    </li>
   </ul>
  </li>
@@ -564,10 +579,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://github.com/daobook/peps">daobook/peps</a>（<code class="docutils literal notranslate"><span class="pre">xinet</span></code> 分支）：托管了 <a class="reference external" href="https://github.com/python/peps">python/peps</a> 的汉化版本。</p></li>
 <li><p>为了方便协作翻译，将 <a class="reference external" href="https://github.com/daobook/peps">daobook/peps</a> 分支下的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 放置到 <a class="reference external" href="https://github.com/sphinx-lcales/peps">sphinx-lcales/peps</a> 中；译者只需要关注翻译 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件即可。同时会定期更新 <a class="reference external" href="https://github.com/sphinx-lcales/peps">sphinx-lcales/peps</a> 中的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 到 <a class="reference external" href="https://github.com/daobook/peps">daobook/peps</a> 中。</p></li>
 </ul>
-<div class="section" id="id1">
-<h2>已完成翻译<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="section" id="pep">
-<h3>PEP 元信息<a class="headerlink" href="#pep" title="永久链接至标题">¶</a></h3>
+<h2>PEP 元信息<a class="headerlink" href="#pep" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0004/" title="(在 PEPs)"><span>PEP 4 – Deprecation of Standard Modules</span></a> （2021/11/15）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0005/" title="(在 PEPs)"><span>PEP 5 – Guidelines for Language Evolution</span></a> （2021/11/15）</p></li>
@@ -576,16 +589,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0387/" title="(在 PEPs)"><span>PEP 387 – Backwards Compatibility Policy</span></a> （2021/11/15）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0609/" title="(在 PEPs)"><span>PEP 609 – PyPA Governance</span></a> （2021/11/15）（完成大部分）</p></li>
 </ul>
-<div class="section" id="id2">
-<h4>需要仔细研读<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id1">
+<h3>需要仔细研读<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0007/" title="(在 PEPs)"><span>PEP 7 – Style Guide for C Code</span></a> （2021/11/15）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0008/" title="(在 PEPs)"><span>PEP 8 – Style Guide for Python Code</span></a> （2021/11/16）</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id3">
-<h3>信息型 PEP<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id2">
+<h2>信息型 PEP<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0247/" title="(在 PEPs)"><span>PEP 247 – API for Cryptographic Hash Functions</span></a> （待更）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0248/" title="(在 PEPs)"><span>PEP 248 – Python Database API Specification v1.0</span></a> （待更）</p></li>
@@ -594,15 +607,26 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0290/" title="(在 PEPs)"><span>PEP 290 – Code Migration and Modernization</span></a> （待更）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0333/" title="(在 PEPs)"><span>PEP 333 – Python Web Server Gateway Interface v1.0</span></a> （待更）</p></li>
 </ul>
-<div class="section" id="id4">
-<h4>需要仔细研读<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id3">
+<h3>需要仔细研读<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0020/" title="(在 PEPs)"><span>PEP 20 – The Zen of Python</span></a> （2021/11/15）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0101/" title="(在 PEPs)"><span>PEP 101 – Doing Python Releases 101</span></a> （待更）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0257/" title="(在 PEPs)"><span>PEP 257 – Docstring Conventions</span></a> （待更）</p></li>
 <li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0287/" title="(在 PEPs)"><span>PEP 287 – reStructuredText Docstring Format</span></a> （待更）</p></li>
+<li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0508/" title="(在 PEPs)"><span>PEP 508 – Dependency specification for Python Software Packages</span></a> （2021/11/17 待更）</p></li>
 </ul>
 </div>
+</div>
+<div class="section" id="id4">
+<h2>完成的 PEPs（已完成，有稳定的接口）<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="python">
+<h3>构建 Python 环境<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0517/" title="(在 PEPs)"><span>PEP 517 – A build-system independent format for source trees</span></a> （2021/11/17）</p></li>
+<li><p><a class="reference external" href="https://daobook.github.io/peps/pep-0518/" title="(在 PEPs)"><span>PEP 518 – Specifying Minimum Build System Requirements for Python Projects</span></a> （2021/11/17）</p></li>
+</ul>
+<p>PEP 517 提出了一个新的、相对最小的接口，供 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 等安装工具与软件包源树和源发行版交互。</p>
 </div>
 </div>
 </div>
@@ -635,11 +659,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="docutils.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="packaging.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Docutils</p>
+            <p class="prev-next-title">packaging.python.org</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="pypa.html" title="下一页 页">

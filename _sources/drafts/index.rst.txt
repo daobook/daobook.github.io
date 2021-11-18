@@ -13,8 +13,10 @@
 - `Invoke`__ 
 - `Jinja`__
 - `Jupytext`__
+- `conda-forge`__
 
 __ https://github.com/lkiesow/python-feedgen
 __ https://www.pyinvoke.org/
 __ https://jinja.palletsprojects.com/
 __ https://jupytext.readthedocs.io
+__ https://conda-forge.org/
