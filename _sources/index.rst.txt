@@ -29,6 +29,7 @@
    python/index
    sinicization/index
    write/index
+   study/index
    english/index
    posts/index
    release/index
