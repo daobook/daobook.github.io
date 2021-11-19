@@ -32,6 +32,7 @@
    english/index
    posts/index
    release/index
+   fun/index
    drafts/index
 
 索引和表格
