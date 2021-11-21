@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>一切有趣的对象 &#8212; daobook 0.0.1 文档</title>
+    <title>Python AST &#8212; daobook 0.0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -92,8 +92,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="缓存区" href="../drafts/index.html" />
-    <link rel="prev" title="发布 daobook v0.0.1" href="../release/v0.0.1.html" /> 
+    <link rel="next" title="常见问题" href="faqs.html" />
+    <link rel="prev" title="Docutils 使用手册" href="01_docutils.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -168,33 +168,33 @@ commentsRunWhenDOMLoaded(addUtterances);
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../python/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/00_sphinx-intl.html">
+    <a class="reference internal" href="00_sphinx-intl.html">
      Sphinx 国际化
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/01_docutils.html">
+    <a class="reference internal" href="01_docutils.html">
      Docutils 使用手册
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../python/02_ast.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Python AST
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../python/faqs.html">
+    <a class="reference internal" href="faqs.html">
      常见问题
     </a>
    </li>
@@ -426,8 +426,8 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fun/index.html">
    一切有趣的对象
   </a>
  </li>
@@ -507,9 +507,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fun/index.md.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/02_ast.ipynb.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -527,10 +527,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Ffun/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fpython/02_ast.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/fun/index.md"><button
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/python/02_ast.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -550,19 +550,6 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> 导航
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#github">
-   GitHub 中的有趣项目
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -570,12 +557,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>一切有趣的对象<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="github">
-<h2>GitHub 中的有趣项目<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://github.com/gege-circle">戈戈圈</a> 是一个以二次元同人创作为主的网络圈子，由王戈wg的妹妹于2018年7月建立。2019年8月，王戈wg正式加入戈戈圈，之后该圈子正式在网络上公开。截止2021年2月，戈戈圈的爱好者主要分布在海南、广东、四川等地。圈子内容主要由绘画和小说构成，爱好者的创作理念是“热爱与欢乐”，这些虚拟文化给互联网形成了多样化的乐趣。</p>
-</div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="python-ast">
+<h1>Python AST<a class="headerlink" href="#python-ast" title="永久链接至标题">¶</a></h1>
+<p>详细内容见：<a class="reference external" href="https://daobook.github.io/cpython/library/ast.html">cpython/library/ast.html</a>。</p>
+<p>抽象语法树可通过将 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.PyCF_ONLY_AST" title="(在 Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code></a> 作为旗标传递给 <a class="reference external" href="https://daobook.github.io/sphinx/zh-CN/usage/restructuredtext/domains.html#compile" title="(在 Sphinx v4.3.0+)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 内置函数来生成，或是使用 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#module-ast" title="(在 Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块中提供的 <code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code> 辅助函数。返回结果将是一个对象树，其中的类都继承自 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.AST" title="(在 Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>。抽象语法树可被内置的 <a class="reference external" href="https://daobook.github.io/sphinx/zh-CN/usage/restructuredtext/domains.html#compile" title="(在 Sphinx v4.3.0+)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 函数编译为一个 Python 代码对象。</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -591,7 +576,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./fun"
+            path: "./python"
         },
         predefinedOutput: true
     }
@@ -606,17 +591,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../release/v0.0.1.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="01_docutils.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">发布 daobook v0.0.1</p>
+            <p class="prev-next-title">Docutils 使用手册</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../drafts/index.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="faqs.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">缓存区</p>
+        <p class="prev-next-title">常见问题</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

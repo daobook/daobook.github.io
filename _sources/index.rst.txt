@@ -27,6 +27,7 @@
    :caption: 导航
 
    python/index
+   cpp/index
    sinicization/index
    write/index
    study/index

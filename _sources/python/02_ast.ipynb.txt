@@ -1,0 +1,30 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Python AST\n",
+    "\n",
+    "详细内容见：{daobook}`cpython/library/ast.html`。\n",
+    "\n",
+    "抽象语法树可通过将 {data}`ast.PyCF_ONLY_AST` 作为旗标传递给 {func}`compile` 内置函数来生成，或是使用 {mod}`ast` 模块中提供的 {func}`parse` 辅助函数。返回结果将是一个对象树，其中的类都继承自 {class}`ast.AST`。抽象语法树可被内置的 {func}`compile` 函数编译为一个 Python 代码对象。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  },
+  "orig_nbformat": 4
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

@@ -189,11 +189,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../python/02_ast.html">
+     Python AST
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../python/faqs.html">
      常见问题
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cpp/index.html">
+   C++
+  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
@@ -546,14 +556,18 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#x">
-   变更（
+  <a class="reference internal nav-link" href="#xin">
    <code class="docutils literal notranslate">
     <span class="pre">
-     3.10x
+     xin
     </span>
    </code>
-   ）
+   分支的生成
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   变更
   </a>
  </li>
 </ul>
@@ -569,14 +583,40 @@ commentsRunWhenDOMLoaded(addUtterances);
                  <div class="tex2jax_ignore mathjax_ignore section" id="cpython">
 <h1>CPython<a class="headerlink" href="#cpython" title="永久链接至标题">¶</a></h1>
 <p><span class="guilabel">预览</span>：<a class="reference external" href="https://daobook.github.io/cpython">cpython</a></p>
-<p>在 <a class="reference external" href="https://github.com/daobook/cpython">daobook/cpython</a> 的 <code class="docutils literal notranslate"><span class="pre">3.10x</span></code> 分支维护了 <a class="reference external" href="https://github.com/python/cpython">python/cpython</a>/<code class="docutils literal notranslate"><span class="pre">3.10</span></code> 的中文版本。</p>
-<p>基于 Sphinx4.2.0 构建中文文档。</p>
-<p>支持自动部署到 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>。</p>
-<div class="section" id="x">
-<h2>变更（<code class="docutils literal notranslate"><span class="pre">3.10x</span></code>）<a class="headerlink" href="#x" title="永久链接至标题">¶</a></h2>
+<p>在 <a class="reference external" href="https://github.com/daobook/cpython">daobook/cpython</a> 的 <code class="docutils literal notranslate"><span class="pre">xin</span></code> 分支维护了 <a class="reference external" href="https://github.com/python/cpython">python/cpython</a>/<code class="docutils literal notranslate"><span class="pre">3.10</span></code> 的中文版本。</p>
+<p>基于 Sphinx4.x 构建中文文档。支持自动部署到 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>。</p>
+<div class="section" id="xin">
+<h2><code class="docutils literal notranslate"><span class="pre">xin</span></code> 分支的生成<a class="headerlink" href="#xin" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">xin</span></code> 分支的生成过程：</p>
+<p>首先，基于分支 <code class="docutils literal notranslate"><span class="pre">main</span></code>，直接使用 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 生成 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 于 Windows 平台使用（原来的 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 重命名为 <code class="docutils literal notranslate"><span class="pre">make-old.bat</span></code>）。</p>
+<p>接着，在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中添加如下内容，以支持 <code class="docutils literal notranslate"><span class="pre">zh_CN</span></code>：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx-intl &amp; zh_CN</span>
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;zh_CN&#39;</span>
+<span class="n">locale_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;../locales/&#39;</span><span class="p">]</span>
+<span class="n">gettext_compact</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>接着，引入 <a class="reference external" href="https://github.com/daobook/python-docs-zh-cn">daobook/python-docs-zh-cn</a> 的 <code class="docutils literal notranslate"><span class="pre">xin</span></code> 分支的中文 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/daobook/python-docs-zh-cn.git locales/zh_CN/LC_MESSAGES/
+rm -rf locales/zh_CN/LC_MESSAGES/.git
+</pre></div>
+</div>
+<p>然后，生成 <code class="docutils literal notranslate"><span class="pre">.pot</span></code> 文件，并更新 <code class="docutils literal notranslate"><span class="pre">.po</span></code> 文件：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Doc
+make gettext
+sphinx-intl update -p build/gettext -l zh_CN
+</pre></div>
+</div>
+<p>最后，生成 HTML 文档，便可以预览了：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make html
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>变更<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>于 2021/11/08 引入 <a class="reference external" href="https://github.com/python/python-docs-zh-cn">python/python-docs-zh-cn</a> 的 <code class="docutils literal notranslate"><span class="pre">3.10</span></code> 分支的中文 <code class="docutils literal notranslate"><span class="pre">po</span></code> 文件。</p></li>
-<li><p>于 2021/11/08 更新 <code class="docutils literal notranslate"><span class="pre">sphinx.po</span></code>。</p></li>
+<li><p>更新 <code class="docutils literal notranslate"><span class="pre">library/language.po</span></code>、 <code class="docutils literal notranslate"><span class="pre">library/ast.po</span></code>。（2021/11/21）</p></li>
 </ul>
 </div>
 </div>
