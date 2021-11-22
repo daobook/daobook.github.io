@@ -6,10 +6,6 @@
 
 .. only:: html
 
-   .. image:: https://badges.gitter.im/daobook/blogs.svg/?version=latest
-      :target: https://gitter.im/daobook/blogs?utm_source=badge
-         &utm_medium=badge&utm_campaign=pr-badge
-
    .. image:: https://img.shields.io/github/issues/daobook/daobook.github.io
       :target: https://github.com/daobook/daobook.github.io/issues
 
