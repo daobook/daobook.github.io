@@ -28,6 +28,7 @@
 
    python/index
    cpp/index
+   self-driving/index
    sinicization/index
    write/index
    study/index
