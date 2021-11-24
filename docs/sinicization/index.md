@@ -7,6 +7,7 @@
 :maxdepth: 2
 
 python/index
+cpp/index
 sphinx/index
 myst/index
 ```
