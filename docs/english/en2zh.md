@@ -12,3 +12,9 @@ scaffolding|手脚架
 Frequently Asked Questions|常见问题
 Pluggable|可拔插
 token|形符
+
+## 专有名词
+
+英语|汉语|缩略语
+:-|:-|:-
+Dynamic Host Configuration Protocol|动态主机配置协议|DHCP
