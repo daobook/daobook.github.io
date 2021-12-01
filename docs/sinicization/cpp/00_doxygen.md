@@ -29,5 +29,3 @@ Doxygen 的最新二进制文件和源代码可以从以下网站下载：<https
 * Doxygen 的 Doxygen 文档：<a href="https://codedocs.xyz/doxygen/doxygen/"><img src="https://codedocs.xyz/doxygen/doxygen.svg"/></a>
 
 * 安装：请阅读手册中的 [安装](https://www.doxygen.nl/manual/install.html) 部分 
-
-
