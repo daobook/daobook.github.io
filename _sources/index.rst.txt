@@ -28,6 +28,7 @@
    sinicization/index
    write/index
    study/index
+   awesome/index
    english/index
    posts/index
    release/index

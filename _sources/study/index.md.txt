@@ -12,8 +12,7 @@
 - {github}`EbookFoundation/reading-lists`：Implementing serverless reading lists for project gutenberg site
 - {github}`EbookFoundation/free-science-books`：Inspired by free-programming-books, here's free-science-books
 - [Standard Ebooks](https://github.com/standardebooks)
-- {github}``：
-- {github}``：
-- {github}``：
-- {github}``：
-- {github}``：
+
+## web
+
+- [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard)

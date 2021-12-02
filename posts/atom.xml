@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://daobook.github.io</id>
   <title>Blog</title>
-  <updated>2021-12-01T09:00:35.598475+00:00</updated>
+  <updated>2021-12-02T09:15:05.501419+00:00</updated>
   <link href="https://daobook.github.io"/>
-  <link href="https://daobook.github.io/posts/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
+  <link href="https://daobook.github.io/zh_CN/posts/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
   <entry>
-    <id>https://daobook.github.io/release/v0.0.1.html</id>
+    <id>https://daobook.github.io/zh_CN/release/v0.0.1.html</id>
     <title>发布 daobook v0.0.1</title>
     <updated>2021-10-24T18:00:00+00:00</updated>
     <author>
@@ -35,7 +35,7 @@
     }
     &lt;/script&gt;
     &lt;script&gt;kernelName = 'python3'&lt;/script&gt;</content>
-    <link href="https://daobook.github.io/release/v0.0.1.html" rel="alternate"/>
+    <link href="https://daobook.github.io/zh_CN/release/v0.0.1.html" rel="alternate"/>
     <summary>初步设置项目。支持 {fa}`check,text-success mr-1` 渲染：。</summary>
     <category term="xinetzone" label="xinetzone"/>
     <published>2021-10-24T18:00:00+00:00</published>
