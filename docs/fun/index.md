@@ -12,3 +12,7 @@
 - {github}`jupyter-widgets/tutorial`: A tutorial for widgets
 - {github}`borea17/InteractiveTransformations`: Jupyter notebooks containing interactive transformations using plotly and ipywidgets.
 - {github}`jupyter-widgets/midicontrols`: A Jupyter widget for midi controllers.
+
+## Gluon
+
+{github}`awslabs/gluon-ts/`: Probabilistic time series modeling in Python
