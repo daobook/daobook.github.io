@@ -1,0 +1,918 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOTA代码 &#8212; daobook 0.0.1 文档</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "daobook/daobook.github.io");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".cell"
+        const thebe_selector_input = ".cell_input div.highlight"
+        const thebe_selector_output = ".cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="其他" href="other.html" />
+    <link rel="prev" title="数据集" href="datasets.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">daobook 0.0.1 文档</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  导航
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/index.html">
+   Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/00_sphinx-intl.html">
+     Sphinx 国际化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/01_docutils.html">
+     Docutils 使用手册
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/02_ast.html">
+     Python AST
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/faqs.html">
+     常见问题
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cpp/index.html">
+   C++
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../cpp/breathe/index.html">
+     Breathe 文档
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../cpp/breathe/quickstart.html">
+       快速上手
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../self-driving/index.html">
+   无人驾驶
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../self-driving/apollo/index.html">
+     Apollo Auto
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../self-driving/apollo/roadmap.html">
+       Apollo 学习蓝图
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://daobook.github.io/apollo-book">
+     Apollo Book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sinicization/index.html">
+   中国化
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sinicization/python/index.html">
+     Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/cpython.html">
+       CPython
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/devguide.html">
+       Python 开发者指南
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/docutils.html">
+       Docutils
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/packaging.html">
+       packaging.python.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/peps.html">
+       PEPS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/pypa.html">
+       PyPA
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/python-guide.html">
+       python-guide
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sinicization/cpp/index.html">
+     C++
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/cpp/00_doxygen.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         doxygen
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/cpp/01_breathe.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         breathe
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sinicization/sphinx/index.html">
+     Sphinx
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/sphinx/furo.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         furo
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/sphinx/rtd.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         sphinx-rtd-theme
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/sphinx/sphinx.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         sphinx
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/sphinx/sphinx-book-theme.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         sphinx-book-theme
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/sphinx/sphinx-comments.html">
+       Sphinx 评论功能
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../sinicization/myst/index.html">
+     MyST Markdown
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/jupyter-book.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyter-book
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/markdown-it.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         markdown-it
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/markdown-it-py.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         markdown-it-py
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/myst/myst-parser.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MyST-Parser
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../write/index.html">
+   写作
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../write/reStructuredText.html">
+     reStructuredText 手册
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../write/styleguide.html">
+     风格指南
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../study/index.html">
+   学习
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Awesome
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ai.html">
+     人工智能
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="robotics.html">
+     Robotics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="computer-vision.html">
+     Computer Vision
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dash.html">
+     Dash
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="self-driving.html">
+     无人驾驶
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="drivers.html">
+     硬件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="datasets.html">
+     数据集
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     SOTA代码
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="other.html">
+     其他
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../english/index.html">
+   英语
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../english/en2zh.html">
+     中英互译
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../posts/index.html">
+   博客
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../release/index.html">
+   版本发布
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../release/v0.0.1.html">
+     发布 daobook v0.0.1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fun/index.html">
+   一切有趣的对象
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../drafts/index.html">
+   缓存区
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/drive.html">
+     硬件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/markdown.html">
+     在你的markdown文件中执行代码
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/ref.html">
+     回收站
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../drafts/temp.html">
+     缓存区
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <p>
+    版权所有 © 2021
+    <a href="https://daobook.github.io/">Dao Book</a>
+</p>
+<p>
+    由 <a href="https://ebp.jupyterbook.org/">EBP</a> 
+    提供技术支持
+</p>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/awesome/sota.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/daobook/daobook.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fawesome/sota.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/awesome/sota.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-detection">
+   物体检测|Object Detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#segmentation">
+   分割|Segmentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sensor-fusion">
+   传感器融合|Sensor Fusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-making">
+   决策系统|Decision Making
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motion-planer">
+   运动规划|Motion Planer
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="sota">
+<h1>SOTA代码<a class="headerlink" href="#sota" title="永久链接至标题">¶</a></h1>
+<div class="section" id="object-detection">
+<h2>物体检测|Object Detection<a class="headerlink" href="#object-detection" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Stereo</span> <span class="pre">R-CNN</span></code> <a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/Stereo-RCNN">HKUST-Aerial-Robotics/Stereo-RCNN</a>  - <code class="docutils literal notranslate"><span class="pre">CVPR2019</span></code><br />
+研究机构 : 港科大Aerial Robotics Group和大疆<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1902.09738">Stereo R-CNN based 3D Object Detection for Autonomous Driving</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SimpleDet</span></code><a class="reference external" href="https://github.com/tusimple/simpledet">tusimple/simpledet</a> - <code class="docutils literal notranslate"><span class="pre">SOTA</span> <span class="pre">on</span> <span class="pre">consumer</span> <span class="pre">grade</span> <span class="pre">hardware</span> <span class="pre">at</span> <span class="pre">large</span> <span class="pre">scale</span></code><br />
+研究机构 : 图森<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1903.05831">SimpleDet: A Simple and Versatile Distributed Framework for Object Detection and Instance Recognition</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PointPillars</span></code> <a class="reference external" href="https://github.com/traveller59/second.pytorch">traveller59/second.pytorch</a> -<code class="docutils literal notranslate"><span class="pre">SOTA</span> <span class="pre">for</span> <span class="pre">Birds</span> <span class="pre">Eye</span> <span class="pre">View</span> <span class="pre">Object</span> <span class="pre">Detection</span> <span class="pre">on</span> <span class="pre">KITTI</span> <span class="pre">Cyclists</span> <span class="pre">Moderate</span></code><br />
+研究机构 : nuTonomy（安波福下的公司）<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1812.05784">PointPillars: Fast Encoders for Object Detection from Point Clouds</a>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PointRCNN</span></code><a class="reference external" href="https://github.com/sshaoshuai/PointRCNN">sshaoshuai/PointRCNN</a> -
+<code class="docutils literal notranslate"><span class="pre">KITTI</span> <span class="pre">for</span> <span class="pre">3D</span> <span class="pre">Object</span> <span class="pre">Detection</span> <span class="pre">(Cars)</span></code> : #2,Cars-Easy(AP:84.32%); #1,Cars-Moderate(AP:75.42%); #1,Cars-Hard(AP:67.86%)<br />
+研究机构 : 香港中文大学<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1812.04244">PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sshkhr/BigDataCup18_Submission">sshkhr/BigDataCup18_Submission</a> -
+IEEE International Conference On Big Data Cup 2018(2018年IEEE国际大数据杯会议的道路损伤检测和分类挑战),<br />
+研究机构 :  印度科学研究所<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1811.04535">Road Damage Detection And Classification In Smartphone Captured Images Using Mask R-CNN</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Complex-YOLO</span></code><a class="reference external" href="https://github.com/AI-liu/Complex-YOLO">AI-liu/Complex-YOLO</a> -<br />
+研究机构 : 法里奥、伊尔默瑙理工大学<br />
+论文:<a class="reference external" href="https://arxiv.org/abs/1803.06199">Complex-YOLO: Real-time 3D Object Detection on Point Clouds</a></p></li>
+<li><p><a class="reference external" href="https://github.com/kujason/avod">kujason/avod</a> -<code class="docutils literal notranslate"><span class="pre">KITTI</span> <span class="pre">3D</span> <span class="pre">Object</span> <span class="pre">Detection</span> <span class="pre">for</span> <span class="pre">cars</span></code>#2 Cars-Hard(AP:66.38%)<br />
+研究机构 : 滑铁卢大学工程学院机械与机电工程系<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1712.02294">Joint 3D Proposal Generation and Object Detection from View Aggregation</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PointNet</span></code><a class="reference external" href="https://github.com/charlesq34/pointnet">charlesq34/pointnet</a>-
+<code class="docutils literal notranslate"><span class="pre">SOTA（Object</span> <span class="pre">Localization</span> <span class="pre">&amp;</span> <span class="pre">3D</span> <span class="pre">Object</span> <span class="pre">Detection）</span></code> :Cars、Cyclists、Pedestrian<br />
+研究机构 : 斯坦福大学、Nuro公司、加州大学圣地亚哥分校<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1711.08488">Frustum PointNets for 3D Object Detection from RGB-D Data</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SqueezeDet</span></code><a class="reference external" href="https://github.com/BichenWuUCB/squeezeDet">BichenWuUCB/squeezeDet</a> -<code class="docutils literal notranslate"><span class="pre">SOTA</span> <span class="pre">for</span> <span class="pre">KITTI(2016)</span></code><br />
+研究机构 : 伯克利、<a class="reference external" href="http://deepscale.ai/">DeepScale</a>（专注于自动驾驶感知技术）<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1612.01051">SqueezeDet: Unified, Small, Low Power Fully Convolutional Neural Networks for Real-Time Object Detection for Autonomous Driving</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VoxelNet</span></code><a class="reference external" href="https://github.com/charlesq34/pointnet">charlesq34/pointnet</a> -
+<code class="docutils literal notranslate"><span class="pre">SOTA（Object</span> <span class="pre">Localization</span> <span class="pre">&amp;</span> <span class="pre">3D</span> <span class="pre">Object</span> <span class="pre">Detection）</span></code>:Cars、Cyclists、Pedestrian<br />
+研究机构 : 苹果公司<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1711.06396">VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection</a></p></li>
+</ul>
+</div>
+<div class="section" id="segmentation">
+<h2>分割|Segmentation<a class="headerlink" href="#segmentation" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LEDNet</span></code><a class="reference external" href="https://github.com/xiaoyufenfei/LEDNet">xiaoyufenfei/LEDNet</a> - 暂未released，Semantic Segmentation: <code class="docutils literal notranslate"><span class="pre">Real-time(71FPS)</span></code>、Semantic Segmentation(Mean IoU 70.6%)，ICIP 2019<br />
+研究机构 : 南京邮电大学、天普大学<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1905.02423">LEDNet: A Lightweight Encoder-Decoder Network for Real-Time Semantic Segmentation</a>，</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">swiftnet</span></code><a class="reference external" href="https://github.com/orsic/swiftnet">orsic/swiftnet</a> -
+Real-Time Semantic Segmentation on Cityscapes #9,Semantic Segmentation(Mean IoU:75.5%);#2,<code class="docutils literal notranslate"><span class="pre">Real-time(Mean</span> <span class="pre">IoU:75.5%)</span></code>;#3,<code class="docutils literal notranslate"><span class="pre">Real-time(Frame:39.9</span> <span class="pre">fps)</span></code>,<code class="docutils literal notranslate"><span class="pre">CVPR2019</span></code><br />
+研究机构 : 萨格勒布大学 电气工程与计算学院<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1903.08469">In Defense of Pre-trained ImageNet Architectures for Real-time Semantic Segmentation of Road-driving Images</a></p></li>
+<li><p><a class="reference external" href="https://github.com/YangZhang4065/AdaptationSeg">YangZhang4065/AdaptationSeg</a> - SOTA for <code class="docutils literal notranslate"><span class="pre">Image-to-Image</span> <span class="pre">Translation</span></code> on SYNTHIA-to-Cityscapes<br />
+研究机构 :  IEEE Member<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1812.09953">A Curriculum Domain Adaptation Approach to the Semantic Segmentation of Urban Scenes</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BiSeNet</span></code><a class="reference external" href="https://github.com/ycszen/TorchSeg">ycszen/TorchSeg</a> -
+Cityscapes：#2，Real-time（<code class="docutils literal notranslate"><span class="pre">Frame:65.5</span> <span class="pre">Fps</span></code>）;#8 (<code class="docutils literal notranslate"><span class="pre">Mean</span> <span class="pre">IoU</span> <span class="pre">78.9%</span></code>)、CamVid：#2，Mean IoU 68.7%;ECCV 2018<br />
+研究机构 : 多谱信息处理技术国家级重点实验室、华中科技大学自动化学院、北大、旷视<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1808.00897">BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/MSiam/TFSegmentation">MSiam/TFSegmentation</a> -
+Benchmarking Framework（Cityscapes dataset for urban scenes）<br />
+研究机构 : 阿尔伯塔大学、开罗大学<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1803.02758">RTSeg: Real-time Semantic Segmentation Comparative Study</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MultiNet</span></code><a class="reference external" href="https://github.com/MarvinTeichmann/MultiNet">MarvinTeichmann/MultiNet</a> -  SOTA for KITTI(Road Segmentation)<br />
+研究机构 : 多伦多大学计算机科学、剑桥大学工程系、<a class="reference external" href="https://www.fzi.de/en/about-us/">FZI研究中心</a>、Uber ATG<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1612.07695">MultiNet: Real-time Joint Semantic Reasoning for Autonomous Driving</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bermanmaxim/LovaszSoftmax">bermanmaxim/LovaszSoftmax</a> - Cityscapes:#1 for <code class="docutils literal notranslate"><span class="pre">Real-Time（76.9</span> <span class="pre">fps）</span></code>、#16 for Mean IoU(63.06%),<code class="docutils literal notranslate"><span class="pre">CVPR</span> <span class="pre">2018</span></code><br />
+研究机构 : 鲁汶大学<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1705.08790">The Lovász-Softmax loss: A tractable surrogate for the optimization of the intersection-over-union measure in neural networks</a>,</p></li>
+<li><p><a class="reference external" href="https://github.com/BichenWuUCB/SqueezeSeg">BichenWuUCB/SqueezeSeg</a> -<br />
+研究机构 : 伯克利<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1710.07368">SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud</a>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PSPNet</span></code><a class="reference external" href="https://github.com/tensorflow/models/tree/master/research/deeplab">tensorflow/models</a>和<a class="reference external" href="https://github.com/hszhao/PSPNet">hszhao/PSPNet</a> - <code class="docutils literal notranslate"><span class="pre">SOTA</span> <span class="pre">in</span> <span class="pre">(Semantic</span> <span class="pre">Segmentation</span> <span class="pre">&amp;</span> <span class="pre">Real-Time</span> <span class="pre">Semantic</span> <span class="pre">Segmentation)</span></code>，<a class="reference external" href="https://paperswithcode.com/paper/pyramid-scene-parsing-network">more detail</a>,<code class="docutils literal notranslate"><span class="pre">CVPR</span> <span class="pre">2017</span></code><br />
+研究机构 : 香港中文大学、商汤<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1612.01105">Pyramid Scene Parsing Network</a></p></li>
+</ul>
+</div>
+<div class="section" id="sensor-fusion">
+<h2>传感器融合|Sensor Fusion<a class="headerlink" href="#sensor-fusion" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">HKUST-Aerial-Robotics/VINS-Mono</a> - SOTA，IROS 2018,IMU和（单目）摄像头融合的校正方法，用来校准IMU和相机之间的时间偏移。<br />
+研究机构 : <a class="reference external" href="http://uav.ust.hk/">港科大Aerial Robotics Group</a><br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1808.00692">Online Temporal Calibration for Monocular Visual-Inertial Systems</a>,</p></li>
+</ul>
+</div>
+<div class="section" id="decision-making">
+<h2>决策系统|Decision Making<a class="headerlink" href="#decision-making" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/xinleipan/VirtualtoReal-RL">xinleipan/VirtualtoReal-RL</a> -在虚拟环境通过强化学习来训练无人驾驶<br />
+研究机构 : Berkley、清华大学、上海交通大学<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1704.03952">Virtual to Real Reinforcement Learning for Autonomous Driving</a></p></li>
+<li><p>[非官方]<a class="reference external" href="https://github.com/marsauto/europilot">marsauto/europilot</a>和[非官方]<a class="reference external" href="https://github.com/SullyChen/Autopilot-TensorFlow">SullyChen/Autopilot-TensorFlow</a><br />
+研究机构 : 英伟达<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1604.07316">End to End Learning for Self-Driving Cars</a></p></li>
+</ul>
+</div>
+<div class="section" id="motion-planer">
+<h2>运动规划|Motion Planer<a class="headerlink" href="#motion-planer" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>[非官方]<a class="reference external" href="https://github.com/Iftimie/ChauffeurNet">Iftimie/ChauffeurNet</a> -  Waymo出品，通过模仿学习对无人车进行运动规划，全文中文翻译:<a class="reference external" href="https://zhuanlan.zhihu.com/p/57275593">知乎|每周一篇 &amp; 无人驾驶</a><br />
+研究机构 : Waymo Research<br />
+论文 : <a class="reference external" href="https://arxiv.org/abs/1812.03079">ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst</a>,</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "daobook/daobook.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./awesome"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="datasets.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">数据集</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="other.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">其他</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By xinetzone<br/>
+        
+            &copy; Copyright 2021, xinetzone.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
