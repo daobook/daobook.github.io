@@ -12,3 +12,4 @@ scaffolding|手脚架
 Frequently Asked Questions|常见问题
 Pluggable|可拔插
 token|形符
+podcast|播客
