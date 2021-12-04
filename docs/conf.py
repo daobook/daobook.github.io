@@ -59,11 +59,11 @@ extensions = [
 
 myst_enable_extensions = [
     "colon_fence",
-    # "amsmath",
-    # "deflist",
-    # "dollarmath",
-    # "html_admonition",
-    # "html_image",
+    "amsmath",
+    "deflist",
+    "dollarmath",
+    "html_admonition",
+    "html_image",
     # "linkify",
     # "replacements",
     # "smartquotes",
@@ -281,3 +281,11 @@ post_date_format = '%c'
 post_date_format_short = '%b %d, %Y'
 
 # todo_include_todos = True
+
+def setup(app):
+    app.add_object_type('confval', 'confval',
+                        objname='configuration value',
+                        indextemplate='pair: %s; configuration value')
+    app.add_object_type('setuptools-confval', 'setuptools-confval',
+                        objname='setuptools configuration value',
+                        indextemplate='pair: %s; setuptools configuration value')
