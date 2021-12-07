@@ -16,3 +16,7 @@
 ## web
 
 - [Clipboard](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard)
+
+## 算法
+
+- [All Algorithms](https://github.com/AllAlgorithms)
