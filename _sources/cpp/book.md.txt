@@ -15,3 +15,11 @@
 
 - [cplusplus](https://www.cplusplus.com/)
 - [微软：C++ 语言文档](https://docs.microsoft.com/zh-cn/cpp/cpp/?view=msvc-170)
+
+## 推荐书单
+
+- 《C++ Primer》 第 5 版
+- 《C++ 标准程序库》
+- Scott Meyers 《Effective C++》（必读）
+- Anthony Williams 《C++ 并发编程实战》（C++ Concurrency in Action）
+- 陈硕 《Linux 多线程服务器端编程》：以服务端开发为例提升 C++ 水平
