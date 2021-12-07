@@ -1,6 +1,5 @@
 # C++
 
-
 ```{toctree}
 :glob:
 :maxdepth: 3
