@@ -6,6 +6,7 @@
 :glob:
 :maxdepth: 2
 
+readme/index
 python/index
 jupyter/index
 cpp/index
