@@ -198,6 +198,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      常见问题
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/pyodide.html">
+     pyodide
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -316,6 +321,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      <li class="toctree-l3">
       <a class="reference internal" href="../../sinicization/python/peps.html">
        PEPS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../sinicization/python/pygments.html">
+       Pygments
       </a>
      </li>
      <li class="toctree-l3">
@@ -768,7 +778,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p>安装 <code class="docutils literal notranslate"><span class="pre">breathe</span></code>；</p></li>
 <li><p>安装 <code class="docutils literal notranslate"><span class="pre">doxygen</span></code>，并且为要记录的项目生成了 <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> 输出（XML 格式，注意，输出文件夹应包含 index.xml 由 doxygen 生成的输出文件。）（将 <code class="docutils literal notranslate"><span class="pre">GENERATE_XML</span></code> 标签设为 <code class="docutils literal notranslate"><span class="pre">YES</span></code>），假设输出为 <code class="docutils literal notranslate"><span class="pre">xml/</span></code>；</p></li>
-<li><p>使用 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 创建的文档，并将 <code class="docutils literal notranslate"><span class="pre">breathe</span></code> 添加到 <a class="reference external" href="https://daobook.github.io/sphinx/zh-CN/usage/configuration.html#confval-extensions" title="(在 Sphinx v4.4.0+)"><code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code></a> 列表中。</p></li>
+<li><p>使用 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 创建的文档，并将 <code class="docutils literal notranslate"><span class="pre">breathe</span></code> 添加到 <code class="xref std std-confval docutils literal notranslate"><span class="pre">extensions</span></code> 列表中。</p></li>
 <li><p>告诉 <code class="docutils literal notranslate"><span class="pre">breathe</span></code> 关于项目的信息：</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;myproject&quot;</span><span class="p">:</span> <span class="s2">&quot;xml/&quot;</span> <span class="p">}</span>

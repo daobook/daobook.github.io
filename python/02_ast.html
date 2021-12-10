@@ -198,6 +198,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      常见问题
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pyodide.html">
+     pyodide
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -316,6 +321,11 @@ commentsRunWhenDOMLoaded(addUtterances);
      <li class="toctree-l3">
       <a class="reference internal" href="../sinicization/python/peps.html">
        PEPS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../sinicization/python/pygments.html">
+       Pygments
       </a>
      </li>
      <li class="toctree-l3">
@@ -766,7 +776,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                  <div class="tex2jax_ignore mathjax_ignore section" id="python-ast">
 <h1>Python AST<a class="headerlink" href="#python-ast" title="永久链接至标题">¶</a></h1>
 <p>详细内容见：<a class="reference external" href="https://daobook.github.io/cpython/library/ast.html">cpython/library/ast.html</a>。</p>
-<p>抽象语法树可通过将 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.PyCF_ONLY_AST" title="(在 Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code></a> 作为旗标传递给 <a class="reference external" href="https://daobook.github.io/sphinx/zh-CN/usage/restructuredtext/domains.html#compile" title="(在 Sphinx v4.4.0+)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 内置函数来生成，或是使用 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#module-ast" title="(在 Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块中提供的 <code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code> 辅助函数。返回结果将是一个对象树，其中的类都继承自 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.AST" title="(在 Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>。抽象语法树可被内置的 <a class="reference external" href="https://daobook.github.io/sphinx/zh-CN/usage/restructuredtext/domains.html#compile" title="(在 Sphinx v4.4.0+)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 函数编译为一个 Python 代码对象。</p>
+<p>抽象语法树可通过将 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.PyCF_ONLY_AST" title="(在 Python v3.11)"><code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code></a> 作为旗标传递给 <a class="reference external" href="https://daobook.github.io/cpython/library/functions.html#compile" title="(在 Python v3.11)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 内置函数来生成，或是使用 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#module-ast" title="(在 Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模块中提供的 <code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code> 辅助函数。返回结果将是一个对象树，其中的类都继承自 <a class="reference external" href="https://daobook.github.io/cpython/library/ast.html#ast.AST" title="(在 Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>。抽象语法树可被内置的 <a class="reference external" href="https://daobook.github.io/cpython/library/functions.html#compile" title="(在 Python v3.11)"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 函数编译为一个 Python 代码对象。</p>
 </div>
 
     <script type="text/x-thebe-config">
