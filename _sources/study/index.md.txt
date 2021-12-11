@@ -20,3 +20,11 @@
 ## 算法
 
 - [All Algorithms](https://github.com/AllAlgorithms)
+
+## 他人资讯
+
+- [GitHub中文社区](https://www.githubs.cn/)
+
+## 优质学习
+
+- [博士家园](http://www.math.org.cn/)
