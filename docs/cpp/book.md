@@ -15,6 +15,10 @@
 
 - [cplusplus](https://www.cplusplus.com/)
 - [微软：C++ 语言文档](https://docs.microsoft.com/zh-cn/cpp/cpp/?view=msvc-170)
+- [Learn C and C++ Programming](https://www.cprogramming.com/)
+- [Learn C++ Programming](https://www.programiz.com/cpp-programming)
+- [w3schools cpp](https://www.w3schools.com/cpp/)
+- [C 语言中文网](http://c.biancheng.net/cpp/)
 
 ## 推荐书单
 
