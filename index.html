@@ -161,12 +161,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  导航
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="python/index.html">
    Python
@@ -700,6 +695,33 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="about/index.html">
+   关于
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CODE_OF_CONDUCT.html">
+     行为准则
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CONTRIBUTING.html">
+     贡献
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SECURITY.html">
+     安全策略
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -749,9 +771,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/index.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="_sources/index.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -772,7 +794,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/index.rst"><button
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/index.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -804,7 +826,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   索引和表格
+   索引与表格
   </a>
  </li>
 </ul>
@@ -817,93 +839,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="section" id="id1">
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>道可道<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<a class="reference external image-reference" href="https://github.com/daobook/daobook.github.io/issues"><img alt="https://img.shields.io/github/issues/daobook/daobook.github.io" src="https://img.shields.io/github/issues/daobook/daobook.github.io" /></a>
-<a class="reference external image-reference" href="https://github.com/daobook/daobook.github.io/forks"><img alt="https://img.shields.io/github/forks/daobook/daobook.github.io" src="https://img.shields.io/github/forks/daobook/daobook.github.io" /></a>
-<a class="reference external image-reference" href="https://github.com/daobook/daobook.github.io/stargazers"><img alt="https://img.shields.io/github/stars/daobook/daobook.github.io" src="https://img.shields.io/github/stars/daobook/daobook.github.io" /></a>
-<img alt="https://img.shields.io/github/repo-size/daobook/daobook.github.io.svg" src="https://img.shields.io/github/repo-size/daobook/daobook.github.io.svg" /><div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">导航</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python/00_docutils.html">Docutils 使用手册</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/01_ast.html">Python AST</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/faqs.html">常见问题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/pyodide.html">pyodide</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cpp/index.html">C++</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cpp/breathe/index.html">Breathe 文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cpp/book.html">学习资源</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="self-driving/index.html">无人驾驶</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="self-driving/apollo/index.html">Apollo Auto</a></li>
-<li class="toctree-l2"><a class="reference external" href="https://daobook.github.io/apollo-book">Apollo Book</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="sinicization/index.html">中国化</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/readme/index.html">README</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/python/index.html">Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/jupyter/index.html">Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/cpp/index.html">C++</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/sphinx/index.html">Sphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinicization/myst/index.html">MyST Markdown</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="write/index.html">写作</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="write/font.html">font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="write/reStructuredText.html">reStructuredText 手册</a></li>
-<li class="toctree-l2"><a class="reference internal" href="write/readme.html">README</a></li>
-<li class="toctree-l2"><a class="reference internal" href="write/styleguide.html">风格指南</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="study/index.html">学习</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="study/index.html#web">web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study/index.html#id2">算法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study/index.html#id3">他人资讯</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study/index.html#id4">优质学习</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="awesome/index.html">Awesome</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="awesome/ai.html">人工智能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/robotics.html">Robotics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/computer-vision.html">Computer Vision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/dash.html">Dash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/self-driving.html">无人驾驶</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/drivers.html">硬件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/datasets.html">数据集</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/sota.html">SOTA代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="awesome/other.html">其他</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="english/index.html">英语</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="english/en2zh.html">中英互译</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="posts/index.html">博客</a></li>
-<li class="toctree-l1"><a class="reference internal" href="release/index.html">版本发布</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="release/v0.0.1.html">发布 daobook v0.0.1</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fun/index.html">一切有趣的对象</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fun/index.html#github">GitHub 中的有趣项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fun/index.html#jupyter">Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fun/index.html#gluon">Gluon</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="drafts/index.html">缓存区</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="drafts/drive.html">硬件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drafts/markdown.html">在你的markdown文件中执行代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drafts/ref.html">回收站</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drafts/temp.html">缓存区</a></li>
-</ul>
-</li>
-</ul>
+<p><a class="reference external" href="https://github.com/daobook/daobook.github.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/daobook/daobook.github.io" /></a> <a class="reference external" href="https://github.com/daobook/daobook.github.io/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/daobook/daobook.github.io" /></a> <a class="reference external" href="https://github.com/daobook/daobook.github.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/daobook/daobook.github.io" /></a> <a class="reference external" href="https://github.com/daobook/daobook.github.io/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/daobook/daobook.github.io" /></a> <img alt="repo size" src="https://img.shields.io/github/repo-size/daobook/daobook.github.io.svg" /> <a class="reference external" href="https://github.com/daobook/daobook.github.io/graphs/contributors"><img alt="contributors" src="https://img.shields.io/github/contributors/daobook/daobook.github.io.svg" /></a> <a class="reference external" href="https://github.com/daobook/daobook.github.io/watchers"><img alt="watcher" src="https://img.shields.io/github/watchers/daobook/daobook.github.io.svg" /></a></p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
-<div class="section" id="id2">
-<h1>索引和表格<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="id2">
+<h1>索引与表格<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
