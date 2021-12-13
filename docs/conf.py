@@ -116,8 +116,8 @@ extlinks = {
 }
 
 intersphinx_mapping = {
-    'python': ('https://daobook.github.io/cpython/', None),
-    'sphinx': ('https://daobook.github.io/sphinx/zh-CN', None),
+    'python': ('https://daobook.github.io/cpython', None),
+    'sphinx': ('https://daobook.github.io/sphinx', None),
     'peps': ('https://daobook.github.io/peps', None),
 }
 
@@ -153,7 +153,7 @@ html_css_files = ["default.css"]
 
 locale_dirs = ['../locales/']  # path is example but recommended.
 gettext_compact = False  # optional.
-
+epub_show_urls = 'footnote'
 # -- 主题设置 -------------------------------------------------------------------
 
 # 定制主侧栏
