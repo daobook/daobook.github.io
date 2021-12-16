@@ -8,6 +8,7 @@
 python/index
 cpp/index
 ros2/index
+git/index
 self-driving/index
 sinicization/index
 write/index
