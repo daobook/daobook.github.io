@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>README &#8212; daobook 0.0.1 文档</title>
+    <title>Git &#8212; daobook 0.0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -92,8 +92,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="风格指南" href="styleguide.html" />
-    <link rel="prev" title="reStructuredText 手册" href="reStructuredText.html" /> 
+    <link rel="next" title="无人驾驶" href="../self-driving/index.html" />
+    <link rel="prev" title="ROS2" href="../ros2/index.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -234,8 +234,8 @@ commentsRunWhenDOMLoaded(addUtterances);
    ROS2
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/index.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Git
   </a>
  </li>
@@ -546,33 +546,33 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../write/index.html">
    写作
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
   <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="font.html">
+    <a class="reference internal" href="../write/font.html">
      font
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="reStructuredText.html">
+    <a class="reference internal" href="../write/reStructuredText.html">
      reStructuredText 手册
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../write/readme.html">
      README
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="styleguide.html">
+    <a class="reference internal" href="../write/styleguide.html">
      风格指南
     </a>
    </li>
@@ -792,7 +792,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/write/readme.md.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/git/index.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -812,10 +812,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fwrite/readme.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fgit/index.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/write/readme.md"><button
+        <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/git/index.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -835,6 +835,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libgit2">
+   libgit2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gitpython">
+   GitPython
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -842,19 +860,22 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="readme">
-<h1>README<a class="headerlink" href="#readme" title="永久链接至标题">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/RichardLitt/standard-readme">RichardLitt/standard-readme</a>: A standard style for README files</p></li>
-<li><p><a class="reference external" href="https://github.com/anuraghazra/github-readme-stats">anuraghazra/github-readme-stats</a>: Dynamically generated stats for your github readmes</p></li>
-<li><p><a class="reference external" href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">abhisheknaiidu/awesome-github-profile-readme</a>: 😎 A curated list of awesome GitHub Profile READMEs 📝</p></li>
-<li><p><a class="reference external" href="https://github.com/kefranabg/readme-md-generator">kefranabg/readme-md-generator</a>: 📄 CLI that generates beautiful README.md files</p></li>
-<li><p><a class="reference external" href="https://github.com/rahuldkjain/github-profile-readme-generator">rahuldkjain/github-profile-readme-generator</a>: 🚀 Generate GitHub profile README easily with the latest add-ons like visitors count, GitHub stats, etc using minimal UI.</p></li>
-<li><p><a class="reference external" href="https://github.com/othneildrew/Best-README-Template">othneildrew/Best-README-Template</a>: An awesome README template to jumpstart your projects!</p></li>
-<li><p><a class="reference external" href="https://github.com/matiassingers/awesome-readme">matiassingers/awesome-readme</a>: A curated list of awesome READMEs</p></li>
-<li><p><a class="reference external" href="https://github.com/kautukkundan/Awesome-Profile-README-templates">kautukkundan/Awesome-Profile-README-templates</a>: A collection of awesome readme templates to display on your profile</p></li>
-<li><p><a class="reference external" href="https://github.com/vorillaz/devicons">vorillaz/devicons</a>: Devicons - An iconic font made for developers</p></li>
-</ul>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h1>
+<div class="section" id="libgit2">
+<h2>libgit2<a class="headerlink" href="#libgit2" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pygit2</span></code> 中文版本：<a class="reference external" href="https://daobook.github.io/pygit2">pygit2</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">libgit2</span></code> 是一个可移植的、纯 C 语言实现的 Git 核心方法，以可链接库的形式提供，具有可靠的 API，允许在你的应用程序中建立 Git 功能。像 <a class="reference external" href="https://github.com/libgit2/rugged">Rugged</a>（Ruby）、<a class="reference external" href="https://github.com/libgit2/libgit2sharp">LibGit2Sharp</a>（.NET）、<a class="reference external" href="http://www.pygit2.org/">pygit2</a>（Python）和 <a class="reference external" href="http://nodegit.org/">NodeGit</a>（Node）这样的语言绑定允许你用自己喜欢的语言构建 Git 工具。</p>
+<p><code class="docutils literal notranslate"><span class="pre">libgit2</span></code> 被用于支持 <a class="reference external" href="https://gitkraken.com/">GitKraken</a> 和 <a class="reference external" href="https://gmaster.io/">gmaster</a> 等 Git GUI 客户端，以及 GitHub、GitLab 和 Azure DevOps 等 Git 托管服务商上。每次你点击 “merge pull request” 时，我们都会进行合并。</p>
+<p>libgit2 是在一个 <strong>非常宽松</strong> 的许可证下授权的（GPLv2，有一个特殊的链接例外）。这基本上意味着你可以将它（未经修改）与任何种类的软件链接，而不必发布其源代码。此外，示例代码已被释放到公共领域（更多信息见 <a class="reference external" href="https://github.com/libgit2/.github/blob/main/examples/COPYING">单独的许可证</a>）。</p>
+</div>
+</div>
+<div class="section" id="gitpython">
+<h2>GitPython<a class="headerlink" href="#gitpython" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">GitPython</span></code> 中文版本：<a class="reference external" href="https://daobook.github.io/GitPython">GitPython</a>。</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -870,7 +891,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./write"
+            path: "./git"
         },
         predefinedOutput: true
     }
@@ -885,17 +906,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="reStructuredText.html" title="上一页 页">
+    <a class='left-prev' id="prev-link" href="../ros2/index.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">reStructuredText 手册</p>
+            <p class="prev-next-title">ROS2</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="styleguide.html" title="下一页 页">
+    <a class='right-next' id="next-link" href="../self-driving/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">风格指南</p>
+        <p class="prev-next-title">无人驾驶</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
