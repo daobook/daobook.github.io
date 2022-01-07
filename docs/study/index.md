@@ -28,3 +28,17 @@
 ## 优质学习
 
 - [博士家园](http://www.math.org.cn/)
+
+## 竞赛
+
+- [数据竞赛Baseline & Topline分享](https://github.com/datawhalechina/competition-baseline)
+
+## Linux 学习
+
+- [u-boot](https://github.com/u-boot)/**[u-boot](https://github.com/u-boot/u-boot)**
+- [DENX](https://www.denx.de/wiki/Main/WebHome) > [DULG](https://www.denx.de/wiki/DULG/WebHome)
+- [嵌入式Linux移植和Uboot（二）：Uboot命令、启动过程、移植和烧写介绍](https://zhuanlan.zhihu.com/p/195706497)
+
+## Python 调用 C/C++
+
+- [CFFI](https://cffi.readthedocs.io/en/latest/) | [中文](https://cffi-zh-cn.readthedocs.io/zh/latest/index.html)
