@@ -80,7 +80,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../_static/translations.js"></script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -159,7 +159,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
@@ -799,8 +799,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
+                title="切换导航" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -808,7 +808,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -816,11 +816,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../../_sources/sinicization/sphinx/sphinx-intl.md.txt"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -832,23 +832,23 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/daobook/daobook.github.io"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="源库"><i
+                    class="fab fa-github"></i>资料库</button></a>
         <a class="issues-button"
             href="https://github.com/daobook/daobook.github.io/issues/new?title=Issue%20on%20page%20%2Fsinicization/sphinx/sphinx-intl.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="打开一个问题"><i class="fas fa-lightbulb"></i>公开的问题</button></a>
         <a class="edit-button" href="https://github.com/daobook/daobook.github.io/edit/main/docs/sinicization/sphinx/sphinx-intl.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+                title="编辑这个页面"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -856,7 +856,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> 导航
@@ -896,7 +896,50 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sphinx 国际化</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 导航 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   研究需要翻译的项目
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   完善翻译
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   更新源文档
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   贡献源文档
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   小技巧
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                  <div class="tex2jax_ignore mathjax_ignore section" id="sphinx">
 <h1>Sphinx 国际化<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
@@ -967,63 +1010,63 @@ sphinx-intl update -p _build/gettext -l zh_CN
 <p>接着，创建文件 <code class="file docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code> 用于部署自动化流程。</p>
 <div class="literal-block-wrapper docutils container" id="sphinx-intl-deploy-yml">
 <div class="code-block-caption"><span class="caption-text">daobook/sphinx-intl deploy.yml</span><a class="headerlink" href="#sphinx-intl-deploy-yml" title="永久链接至代码">¶</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">deploy</span>
-<span class="linenos"> 2</span><span class="nt">on</span><span class="p">:</span>
-<span class="linenos"> 3</span><span class="nt">push</span><span class="p">:</span>
-<span class="linenos"> 4</span>    <span class="nt">branches</span><span class="p">:</span>
-<span class="linenos"> 5</span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">main</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="nt">on</span><span class="p">:</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="nt">push</span><span class="p">:</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w"></span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="nt">jobs</span><span class="p">:</span>
-<span class="linenos"> 8</span><span class="c1"># 这个工作流程包含一个名为 &quot;build&quot; 的 job</span>
-<span class="linenos"> 9</span><span class="nt">build</span><span class="p">:</span>
-<span class="linenos">10</span>    <span class="c1"># job 将运行的运行器的类型</span>
-<span class="linenos">11</span>    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="linenos"> 7</span><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="c1"># 这个工作流程包含一个名为 &quot;build&quot; 的 job</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1"># job 将运行的运行器的类型</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
 <span class="linenos">12</span>
-<span class="linenos">13</span>    <span class="c1"># steps 将作为工作的一部分而执行的任务序列</span>
-<span class="linenos">14</span>    <span class="nt">steps</span><span class="p">:</span>
-<span class="linenos">15</span>    <span class="c1"># 这个动作在 $GITHUB_WORKSPACE 下签出你的版本库，以便工作流就可以访问它</span>
-<span class="linenos">16</span>    <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
-<span class="linenos">17</span>    <span class="c1"># 设定 Python 环境</span>
-<span class="linenos">18</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
-<span class="linenos">19</span>        <span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
-<span class="linenos">20</span>        <span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
-<span class="linenos">21</span>        <span class="nt">python-version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3.9</span>
-<span class="linenos">22</span>    <span class="c1"># 设定 conda 环境</span>
-<span class="linenos">23</span>    <span class="p p-Indicator">-</span> <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">s-weigand/setup-conda@v1</span>
-<span class="linenos">24</span>    <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conda --version</span>
-<span class="linenos">25</span>    <span class="p p-Indicator">-</span> <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">which python</span>
+<span class="linenos">13</span><span class="w">    </span><span class="c1"># steps 将作为工作的一部分而执行的任务序列</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1"># 这个动作在 $GITHUB_WORKSPACE 下签出你的版本库，以便工作流就可以访问它</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="c1"># 设定 Python 环境</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.9</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="c1"># 设定 conda 环境</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s-weigand/setup-conda@v1</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda --version</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">which python</span><span class="w"></span>
 <span class="linenos">26</span>
-<span class="linenos">27</span>    <span class="c1"># 安装依赖包</span>
-<span class="linenos">28</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
-<span class="linenos">29</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos">30</span>        <span class="no">pip install -r requirements.txt</span>
+<span class="linenos">27</span><span class="w">    </span><span class="c1"># 安装依赖包</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos">30</span><span class="w">        </span><span class="no">pip install -r requirements.txt</span><span class="w"></span>
 </span><span class="linenos">31</span>
-<span class="linenos">32</span>    <span class="c1"># 克隆</span>
-<span class="linenos">33</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clone</span>
-<span class="linenos">34</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos">35</span>        <span class="no">git clone https://github.com/daobook/sphinx-intl.git draft</span>
+<span class="linenos">32</span><span class="w">    </span><span class="c1"># 克隆</span><span class="w"></span>
+<span class="linenos">33</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Clone</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos">35</span><span class="w">        </span><span class="no">git clone https://github.com/daobook/sphinx-intl.git draft</span><span class="w"></span>
 </span><span class="linenos">36</span>
-<span class="linenos">37</span>    <span class="c1"># 构建 Sphinx 文档</span>
-<span class="linenos">38</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
-<span class="linenos">39</span>        <span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos">40</span>        <span class="no">cp locales/ -rf draft/doc/locale/</span>
-</span><span class="hll"><span class="linenos">41</span>        <span class="no">cd draft/doc</span>
-</span><span class="linenos">42</span>        <span class="no">sphinx-build -b gettext ./ _build/gettext</span>
-<span class="linenos">43</span>        <span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span>
-<span class="linenos">44</span>        <span class="no">sphinx-build -D language=en -b html ./ _build/html/</span>
-<span class="linenos">45</span>        <span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span>
-<span class="linenos">46</span>        <span class="no">cd ../..</span>
-<span class="hll"><span class="linenos">47</span>        <span class="no">cp -rf draft/docs/_build/ _build</span>
-</span><span class="linenos">48</span>        <span class="no">rm -rf draft/</span>
+<span class="linenos">37</span><span class="w">    </span><span class="c1"># 构建 Sphinx 文档</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build the book</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">run</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos">40</span><span class="w">        </span><span class="no">cp locales/ -rf draft/doc/locale/</span><span class="w"></span>
+</span><span class="hll"><span class="linenos">41</span><span class="w">        </span><span class="no">cd draft/doc</span><span class="w"></span>
+</span><span class="linenos">42</span><span class="w">        </span><span class="no">sphinx-build -b gettext ./ _build/gettext</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">        </span><span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">        </span><span class="no">sphinx-build -D language=en -b html ./ _build/html/</span><span class="w"></span>
+<span class="linenos">45</span><span class="w">        </span><span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span><span class="w"></span>
+<span class="linenos">46</span><span class="w">        </span><span class="no">cd ../..</span><span class="w"></span>
+<span class="hll"><span class="linenos">47</span><span class="w">        </span><span class="no">cp -rf draft/docs/_build/ _build</span><span class="w"></span>
+</span><span class="linenos">48</span><span class="w">        </span><span class="no">rm -rf draft/</span><span class="w"></span>
 <span class="linenos">49</span>
-<span class="linenos">50</span>    <span class="c1"># 部署 HTML 到 gh-pages 分支</span>
-<span class="linenos">51</span>    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">GitHub Pages action</span>
-<span class="linenos">52</span>        <span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3.6.1</span>
-<span class="linenos">53</span>        <span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
-<span class="linenos">54</span>        <span class="nt">github_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
-<span class="linenos">55</span>        <span class="nt">publish_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_build/html</span>
-<span class="linenos">56</span>        <span class="nt">user_name</span><span class="p">:</span> <span class="s">&quot;github-actions[bot]&quot;</span>
-<span class="linenos">57</span>        <span class="nt">user_email</span><span class="p">:</span> <span class="s">&quot;github-actions[bot]@users.noreply.github.com&quot;</span>
+<span class="linenos">50</span><span class="w">    </span><span class="c1"># 部署 HTML 到 gh-pages 分支</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GitHub Pages action</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">uses</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3.6.1</span><span class="w"></span>
+<span class="linenos">53</span><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">        </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span><span class="w"></span>
+<span class="linenos">55</span><span class="w">        </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_build/html</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">        </span><span class="nt">user_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;github-actions[bot]&quot;</span><span class="w"></span>
+<span class="linenos">57</span><span class="w">        </span><span class="nt">user_email</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;github-actions[bot]@users.noreply.github.com&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1031,15 +1074,15 @@ sphinx-intl update -p _build/gettext -l zh_CN
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>对于 Jupyter Book 项目，需要做一些调整：</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
-  <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-    <span class="no">cp locales/ -rf draft/doc/locale/</span>
-    <span class="no">cd draft/doc</span>
-    <span class="no">jb build --builder custom --custom-builder gettext --path-output _gettext .</span>
-    <span class="no">rm -rf _gettext/_build/.jupyter_cache/ _gettext/_build/jupyter_execute </span>
-    <span class="no">sphinx-intl update -p _gettext/_build/gettext -l zh_CN</span>
-    <span class="no">jb build .</span>
-    <span class="no">...</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build the book</span><span class="w"></span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">cp locales/ -rf draft/doc/locale/</span><span class="w"></span>
+<span class="w">    </span><span class="no">cd draft/doc</span><span class="w"></span>
+<span class="w">    </span><span class="no">jb build --builder custom --custom-builder gettext --path-output _gettext .</span><span class="w"></span>
+<span class="w">    </span><span class="no">rm -rf _gettext/_build/.jupyter_cache/ _gettext/_build/jupyter_execute </span><span class="w"></span>
+<span class="w">    </span><span class="no">sphinx-intl update -p _gettext/_build/gettext -l zh_CN</span><span class="w"></span>
+<span class="w">    </span><span class="no">jb build .</span><span class="w"></span>
+<span class="w">    </span><span class="no">...</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1071,31 +1114,31 @@ sphinx-intl update -p _build/gettext -l zh_CN
 <p>如若您需要对源文档，即 <a class="reference external" href="https://github.com/sphinx-doc/sphinx-intl">sphinx-doc/sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">/docs/</span></code> 中的内容做出修改或者添加等贡献行为，则可以这样做。</p>
 <p>首先，贡献源文档，并更新 <a class="reference external" href="https://sphinx-locales.github.io/sphinx-intl">sphinx-intl</a> 的 <code class="docutils literal notranslate"><span class="pre">locales/</span></code> 文件夹。
 其次，创建 <a class="reference external" href="https://github.com/daobook/sphinx-intl">daobook/sphinx-intl</a> 的自动化流程 <code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code>：</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nn">...</span>
-<span class="linenos"> 2</span>  <span class="c1"># 安装依赖包</span>
-<span class="linenos"> 3</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
-<span class="linenos"> 4</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos"> 5</span>      <span class="no">pip install -r doc/requirements.txt</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nn">...</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="c1"># 安装依赖包</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">      </span><span class="no">pip install -r doc/requirements.txt</span><span class="w"></span>
 </span><span class="linenos"> 6</span>
-<span class="linenos"> 7</span>  <span class="c1"># 克隆</span>
-<span class="linenos"> 8</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clone</span>
-<span class="linenos"> 9</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos">10</span>      <span class="no">git clone https://github.com/sphinx-locales/sphinx-intl.git draft</span>
+<span class="linenos"> 7</span><span class="w">  </span><span class="c1"># 克隆</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Clone</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos">10</span><span class="w">      </span><span class="no">git clone https://github.com/sphinx-locales/sphinx-intl.git draft</span><span class="w"></span>
 </span><span class="linenos">11</span>
-<span class="linenos">12</span>  <span class="c1"># 构建 Sphinx 文档</span>
-<span class="linenos">13</span>  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Build the book</span>
-<span class="linenos">14</span>    <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-<span class="hll"><span class="linenos">15</span>      <span class="no">cp -rf draft/locales/ doc/locale/</span>
-</span><span class="linenos">16</span>      <span class="no">rm -rf draft/</span>
-<span class="hll"><span class="linenos">17</span>      <span class="no">cd doc</span>
-</span><span class="linenos">18</span>      <span class="no">sphinx-build -b gettext ./ _build/gettext</span>
-<span class="linenos">19</span>      <span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span>
-<span class="linenos">20</span>      <span class="no">sphinx-build -D language=en -b html ./ _build/html/</span>
-<span class="linenos">21</span>      <span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span>
-<span class="linenos">22</span>      <span class="no">cd ..</span>
-<span class="hll"><span class="linenos">23</span>      <span class="no">cp -rf doc/_build/ _build/</span>
-</span><span class="hll"><span class="linenos">24</span>      <span class="no">rm -rf doc/_build/</span>
-</span><span class="linenos">25</span><span class="nn">...</span>
+<span class="linenos">12</span><span class="w">  </span><span class="c1"># 构建 Sphinx 文档</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build the book</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="hll"><span class="linenos">15</span><span class="w">      </span><span class="no">cp -rf draft/locales/ doc/locale/</span><span class="w"></span>
+</span><span class="linenos">16</span><span class="w">      </span><span class="no">rm -rf draft/</span><span class="w"></span>
+<span class="hll"><span class="linenos">17</span><span class="w">      </span><span class="no">cd doc</span><span class="w"></span>
+</span><span class="linenos">18</span><span class="w">      </span><span class="no">sphinx-build -b gettext ./ _build/gettext</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">      </span><span class="no">sphinx-intl update -p _build/gettext -l zh_CN</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">      </span><span class="no">sphinx-build -D language=en -b html ./ _build/html/</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">      </span><span class="no">sphinx-build -D language=zh_CN -b html ./ _build/html/zh-CN</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">      </span><span class="no">cd ..</span><span class="w"></span>
+<span class="hll"><span class="linenos">23</span><span class="w">      </span><span class="no">cp -rf doc/_build/ _build/</span><span class="w"></span>
+</span><span class="hll"><span class="linenos">24</span><span class="w">      </span><span class="no">rm -rf doc/_build/</span><span class="w"></span>
+</span><span class="linenos">25</span><span class="nn">...</span><span class="w"></span>
 </pre></div>
 </div>
 <p>其中，<code class="docutils literal notranslate"><span class="pre">...</span></code> 部分，同 <a class="reference internal" href="#sphinx-intl-deploy-yml"><span class="std std-ref">daobook/sphinx-intl deploy.yml</span></a>。</p>
@@ -1135,8 +1178,8 @@ sphinx-intl update -p _build/gettext -l zh_CN
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="sphinx-comments.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
@@ -1153,19 +1196,17 @@ sphinx-intl update -p _build/gettext -l zh_CN
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By xinetzone<br/>
-        
-            &copy; Copyright 2021, xinetzone.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      通过 xinetzone<br/>
+    
+        &copy; 版权 2021, xinetzone.<br/>
+  </p>
+</footer>
 </main>
 
 

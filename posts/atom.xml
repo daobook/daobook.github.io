@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh_CN">
   <id>https://daobook.github.io</id>
   <title>Blog</title>
-  <updated>2021-12-26T11:09:18.144860+00:00</updated>
+  <updated>2022-01-07T16:45:36.737996+00:00</updated>
   <link href="https://daobook.github.io"/>
   <link href="https://daobook.github.io/zh_CN/posts/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <entry>
     <id>https://daobook.github.io/zh_CN/release/v0.0.1.html</id>
     <title>发布 daobook v0.0.1</title>
@@ -13,8 +13,10 @@
     <author>
       <name>刘新伟</name>
     </author>
-    <content type="html">&lt;p&gt;初步设置项目。&lt;/p&gt;
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;初步设置项目。&lt;/p&gt;
 &lt;p&gt;支持 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;{fa}`check,text-success&lt;/span&gt; &lt;span class="pre"&gt;mr-1`&lt;/span&gt;&lt;/code&gt; 渲染：&lt;span class="fa fa-check text-success mr-1"&gt;&lt;/span&gt;。&lt;/p&gt;
+&lt;/div&gt;
 
     &lt;script type="text/x-thebe-config"&gt;
     {
