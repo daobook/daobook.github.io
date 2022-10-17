@@ -81,20 +81,23 @@ comments_config = {
 }
 
 # MyST NB 设置
-nb_render_priority = {
-    "html": (
-        "application/vnd.jupyter.widget-view+json",
-        "application/javascript",
-        "text/html",
-        "image/svg+xml",
-        "image/png",
-        "image/jpeg",
-        "text/markdown",
-        "text/latex",
-        "text/plain",
-    ),
-    'gettext': ()
-}
+nb_mime_priority_overrides = [
+    ("html", "text/html", 0),
+    ("latex", "text/latex", 20),
+    ("html", "application/vnd.plotly.v1+json", 10),
+    # ("image", "image/svg+xml", None)
+    # (
+    #     "application/vnd.jupyter.widget-view+json",
+    #     "application/javascript",
+    #     "text/html",
+    #     "image/svg+xml",
+    #     "image/png",
+    #     "image/jpeg",
+    #     "text/markdown",
+    #     "text/latex",
+    #     "text/plain",
+    # ), 0)
+]
 
 # 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
 # 避免将 jupter 执行报错的信息输出到 cmd 
@@ -188,7 +191,7 @@ extra_navbar = """<p>
 """
 
 html_theme_options = {
-    "path_to_docs": "docs/",
+    "path_to_docs": "doc/",
     "repository_url": "https://github.com/daobook/daobook.github.io",
     "repository_branch": "main",
     "use_issues_button": True,
