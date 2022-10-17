@@ -167,9 +167,7 @@ html_sidebars = {
         #一个基于 bootstrap 的搜索栏（来自 PyData Sphinx Theme）
         "search-field.html",
         # 一个用于你的书基于 bootstrap 的导航菜单。
-        "sbt-sidebar-nav.html",
-        # 一个 可配置的 HTML 片段，用于添加到侧边栏（默认情况下，它被放置在底部）。
-        "sbt-sidebar-footer.html",
+        "sbt-sidebar-nav.html"
     ],
     "posts/**": [
         "postcard.html",
