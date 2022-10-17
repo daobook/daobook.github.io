@@ -1,54 +1,55 @@
-name: Deploy to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches: [main]
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  deploy-to-pages:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛎️ Checkout
-        uses: actions/checkout@v2
-
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: 🐍 Set up Python 3.10
-        uses: actions/setup-python@v4.0.0
+        uses: actions/setup-python@v2
         with:
           python-version: "3.10"
-
-      - name: 🧳 Cache pip
-        uses: actions/cache@v3
-        with:
-          # This path is specific to Ubuntu
-          path: ~/.cache/pip
-          # Look to see if there is a cache hit for the corresponding requirements file
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-            ${{ runner.os }}-
-
-      # - name: 👷‍ Install Dot and pandoc
-      #   run: |
-      #     conda install -c conda-forge pandoc
-      #     conda install -c conda-forge ipython
-      #     pip install sphinxcontrib-websupport
-      #     sudo apt update
-      #     sudo apt install -y graphviz
-
-      - name: 👷‍ Install dependencies
-        shell: bash
-        run: |
-          pip install --upgrade pip
-          pip install -r doc/requirements.txt
-
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
       - name: 🔧 Build HTML
         run: |
+          sudo apt-get install graphviz
+          pip install -r doc/requirements.txt
           cd doc
           make html
-
-      - name: 🚀 Deploy to GitHub pages
-        uses: peaceiris/actions-gh-pages@v3.6.1
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: doc/_build/html
+          # Upload entire repository
+          path: 'doc/_build/html/'
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
+        # uses: peaceiris/actions-gh-pages@v3.6.1
