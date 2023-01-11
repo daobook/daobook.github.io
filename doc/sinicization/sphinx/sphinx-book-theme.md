@@ -1,6 +1,6 @@
 # `sphinx-book-theme`
 
-{guilabel}`预览`：{daobook}`sphinx-book-theme/zh-CN`
+{guilabel}`预览`：{daobook}`sphinx-book-theme`
 
 {daobook}`#` 工作是：
 
